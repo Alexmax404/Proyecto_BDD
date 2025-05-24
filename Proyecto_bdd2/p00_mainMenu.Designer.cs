@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_bdd2
 {
-    partial class Form1
+    partial class p00_mainMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -41,6 +41,7 @@
             p0_btn_UsarCajero.TabIndex = 1;
             p0_btn_UsarCajero.Text = "Usar Cajero";
             p0_btn_UsarCajero.UseVisualStyleBackColor = true;
+            p0_btn_UsarCajero.Click += p0_btn_UsarCajero_Click;
             // 
             // p0_btn_Acceder
             // 
@@ -63,7 +64,7 @@
             p0_lb_Bienvenido.Text = "Bienvenido";
             p0_lb_Bienvenido.Click += p0_lb_Bienvenido_Click;
             // 
-            // Form1
+            // p00_mainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -71,8 +72,8 @@
             Controls.Add(p0_lb_Bienvenido);
             Controls.Add(p0_btn_Acceder);
             Controls.Add(p0_btn_UsarCajero);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "p00_mainMenu";
+            Text = " ";
             ResumeLayout(false);
             PerformLayout();
         }

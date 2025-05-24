@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_bdd2
 {
-    public partial class Form2 : Form
+    public partial class p03_register : Form
     {
-        public Form2()
+        public p03_register()
         {
             InitializeComponent();
         }
