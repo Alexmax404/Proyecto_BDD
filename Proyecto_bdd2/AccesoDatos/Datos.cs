@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
-namespace aplicacion1.accesoDatos
+namespace Proyecto_bdd2.accesoDatos
 {
     public class Datos
     {

@@ -85,6 +85,7 @@
             p03_btn_register.TabIndex = 1;
             p03_btn_register.Text = "Registrarse";
             p03_btn_register.UseVisualStyleBackColor = true;
+            p03_btn_register.Click += p03_btn_register_Click;
             // 
             // p03_pn_register
             // 
