@@ -30,11 +30,14 @@
         {
             p02_btn_login = new Button();
             p02_pn_login = new Panel();
-            p02_tb_username = new TextBox();
-            p02_tb_numAccount = new TextBox();
-            p03_lb_user = new Label();
             p03_lb_numAccount = new Label();
+            p03_lb_user = new Label();
+            p02_tb_numAccount = new TextBox();
+            p02_tb_username = new TextBox();
+            p02_pn = new Panel();
+            p02_btn_back = new Button();
             p02_pn_login.SuspendLayout();
+            p02_pn.SuspendLayout();
             SuspendLayout();
             // 
             // p02_btn_login
@@ -45,42 +48,19 @@
             p02_btn_login.TabIndex = 0;
             p02_btn_login.Text = "Iniciar Sesion";
             p02_btn_login.UseVisualStyleBackColor = true;
-            //p02_btn_login.Click += this.p02_btn_login_Click;
             // 
             // p02_pn_login
             // 
+            p02_pn_login.BorderStyle = BorderStyle.FixedSingle;
             p02_pn_login.Controls.Add(p03_lb_numAccount);
             p02_pn_login.Controls.Add(p03_lb_user);
             p02_pn_login.Controls.Add(p02_tb_numAccount);
             p02_pn_login.Controls.Add(p02_tb_username);
             p02_pn_login.Controls.Add(p02_btn_login);
-            p02_pn_login.Location = new Point(280, 56);
+            p02_pn_login.Location = new Point(278, 52);
             p02_pn_login.Name = "p02_pn_login";
             p02_pn_login.Size = new Size(250, 332);
             p02_pn_login.TabIndex = 1;
-            // 
-            // p02_tb_username
-            // 
-            p02_tb_username.Location = new Point(61, 83);
-            p02_tb_username.Name = "p02_tb_username";
-            p02_tb_username.Size = new Size(132, 27);
-            p02_tb_username.TabIndex = 1;
-            // 
-            // p02_tb_numAccount
-            // 
-            p02_tb_numAccount.Location = new Point(59, 153);
-            p02_tb_numAccount.Name = "p02_tb_numAccount";
-            p02_tb_numAccount.Size = new Size(132, 27);
-            p02_tb_numAccount.TabIndex = 2;
-            // 
-            // p03_lb_user
-            // 
-            p03_lb_user.AutoSize = true;
-            p03_lb_user.Location = new Point(95, 60);
-            p03_lb_user.Name = "p03_lb_user";
-            p03_lb_user.Size = new Size(59, 20);
-            p03_lb_user.TabIndex = 3;
-            p03_lb_user.Text = "Usuario";
             // 
             // p03_lb_numAccount
             // 
@@ -91,16 +71,60 @@
             p03_lb_numAccount.TabIndex = 4;
             p03_lb_numAccount.Text = "Numero de cuenta";
             // 
+            // p03_lb_user
+            // 
+            p03_lb_user.AutoSize = true;
+            p03_lb_user.Location = new Point(95, 60);
+            p03_lb_user.Name = "p03_lb_user";
+            p03_lb_user.Size = new Size(59, 20);
+            p03_lb_user.TabIndex = 3;
+            p03_lb_user.Text = "Usuario";
+            // 
+            // p02_tb_numAccount
+            // 
+            p02_tb_numAccount.Location = new Point(59, 153);
+            p02_tb_numAccount.Name = "p02_tb_numAccount";
+            p02_tb_numAccount.Size = new Size(132, 27);
+            p02_tb_numAccount.TabIndex = 2;
+            // 
+            // p02_tb_username
+            // 
+            p02_tb_username.Location = new Point(61, 83);
+            p02_tb_username.Name = "p02_tb_username";
+            p02_tb_username.Size = new Size(132, 27);
+            p02_tb_username.TabIndex = 1;
+            // 
+            // p02_pn
+            // 
+            p02_pn.Controls.Add(p02_btn_back);
+            p02_pn.Controls.Add(p02_pn_login);
+            p02_pn.Dock = DockStyle.Fill;
+            p02_pn.Location = new Point(0, 0);
+            p02_pn.Name = "p02_pn";
+            p02_pn.Size = new Size(800, 450);
+            p02_pn.TabIndex = 2;
+            // 
+            // p02_btn_back
+            // 
+            p02_btn_back.Location = new Point(12, 12);
+            p02_btn_back.Name = "p02_btn_back";
+            p02_btn_back.Size = new Size(31, 31);
+            p02_btn_back.TabIndex = 3;
+            p02_btn_back.Text = "←";
+            p02_btn_back.UseVisualStyleBackColor = true;
+            p02_btn_back.Click += p01_btn_back_Click;
+            // 
             // p02_login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(p02_pn_login);
+            Controls.Add(p02_pn);
             Name = "p02_login";
             Text = " ";
             p02_pn_login.ResumeLayout(false);
             p02_pn_login.PerformLayout();
+            p02_pn.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -112,5 +136,7 @@
         private Label p03_lb_user;
         private TextBox p02_tb_numAccount;
         private TextBox p02_tb_username;
+        private Panel p02_pn;
+        private Button p02_btn_back;
     }
 }
