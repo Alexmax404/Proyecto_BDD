@@ -30,6 +30,9 @@
         {
             p01_btn_login = new Button();
             p01_btn_register = new Button();
+            p01_btn_back = new Button();
+            p01_pn_log_reg = new Panel();
+            p01_pn_log_reg.SuspendLayout();
             SuspendLayout();
             // 
             // p01_btn_login
@@ -52,6 +55,25 @@
             p01_btn_register.UseVisualStyleBackColor = true;
             p01_btn_register.Click += p01_btn_register_Click;
             // 
+            // p01_btn_back
+            // 
+            p01_btn_back.Location = new Point(12, 12);
+            p01_btn_back.Name = "p01_btn_back";
+            p01_btn_back.Size = new Size(31, 31);
+            p01_btn_back.TabIndex = 2;
+            p01_btn_back.Text = "←";
+            p01_btn_back.UseVisualStyleBackColor = true;
+            p01_btn_back.Click += p01_btn_back_Click;
+            // 
+            // p01_pn_log_reg
+            // 
+            p01_pn_log_reg.Controls.Add(p01_btn_back);
+            p01_pn_log_reg.Dock = DockStyle.Fill;
+            p01_pn_log_reg.Location = new Point(0, 0);
+            p01_pn_log_reg.Name = "p01_pn_log_reg";
+            p01_pn_log_reg.Size = new Size(800, 450);
+            p01_pn_log_reg.TabIndex = 3;
+            // 
             // p01_log_reg
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -59,8 +81,10 @@
             ClientSize = new Size(800, 450);
             Controls.Add(p01_btn_register);
             Controls.Add(p01_btn_login);
+            Controls.Add(p01_pn_log_reg);
             Name = "p01_log_reg";
             Text = "Form2";
+            p01_pn_log_reg.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -68,5 +92,7 @@
 
         private Button p01_btn_login;
         private Button p01_btn_register;
+        private Button p01_btn_back;
+        private Panel p01_pn_log_reg;
     }
 }

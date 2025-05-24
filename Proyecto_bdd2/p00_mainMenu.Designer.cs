@@ -45,7 +45,7 @@
             // 
             // p0_btn_Acceder
             // 
-            p0_btn_Acceder.Location = new Point(3, 409);
+            p0_btn_Acceder.Location = new Point(12, 409);
             p0_btn_Acceder.Name = "p0_btn_Acceder";
             p0_btn_Acceder.Size = new Size(94, 29);
             p0_btn_Acceder.TabIndex = 2;
