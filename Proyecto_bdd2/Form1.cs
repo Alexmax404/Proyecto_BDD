@@ -7,13 +7,22 @@ namespace Proyecto_bdd2
             InitializeComponent();
         }
 
-
-
-        private void button1_Click_2(object sender, EventArgs e)
+        private void p0_btn_Acceder_Click(object sender, EventArgs e)
         {
-            this.Hide();               // Oculta el formulario actual (Form1)
+            this.Hide();
             Form2 form2 = new Form2();
-            form2.Show();              // Muestra Form2
+            form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
+            form2.Location = this.Location;                 // Copia la ubicación de Form1
+            form2.Show();
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); // Asegura que todos los formularios ocultos también terminen
+        }
+
+        private void p0_lb_Bienvenido_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
