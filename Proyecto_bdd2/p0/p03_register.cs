@@ -33,5 +33,10 @@ namespace Proyecto_bdd2
             form2.Location = this.Location;                 // Copia la ubicación de Form1
             form2.Show();
         }
+
+        private void p03_btn_register_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
