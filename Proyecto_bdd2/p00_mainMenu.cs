@@ -1,8 +1,8 @@
 namespace Proyecto_bdd2
 {
-    public partial class Form1 : Form
+    public partial class p00_mainMenu : Form
     {
-        public Form1()
+        public p00_mainMenu()
         {
             InitializeComponent();
         }
@@ -10,7 +10,7 @@ namespace Proyecto_bdd2
         private void p0_btn_Acceder_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 form2 = new Form2();
+            p01_log_reg form2 = new p01_log_reg();
             form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
             form2.Location = this.Location;                 // Copia la ubicación de Form1
             form2.Show();
@@ -21,6 +21,11 @@ namespace Proyecto_bdd2
         }
 
         private void p0_lb_Bienvenido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p0_btn_UsarCajero_Click(object sender, EventArgs e)
         {
 
         }
