@@ -28,44 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            p0_btn_acceder = new Button();
-            button1 = new Button();
+            p0_btn_UsarCajero = new Button();
+            p0_btn_Acceder = new Button();
+            p0_lb_Bienvenido = new Label();
             SuspendLayout();
             // 
-            // p0_btn_acceder
+            // p0_btn_UsarCajero
             // 
-            p0_btn_acceder.Location = new Point(12, 409);
-            p0_btn_acceder.Name = "p0_btn_acceder";
-            p0_btn_acceder.Size = new Size(94, 29);
-            p0_btn_acceder.TabIndex = 0;
-            p0_btn_acceder.Text = "Acceder";
-            p0_btn_acceder.UseVisualStyleBackColor = true;
-            p0_btn_acceder.Click += button1_Click_2;
+            p0_btn_UsarCajero.Location = new Point(112, 409);
+            p0_btn_UsarCajero.Name = "p0_btn_UsarCajero";
+            p0_btn_UsarCajero.Size = new Size(94, 29);
+            p0_btn_UsarCajero.TabIndex = 1;
+            p0_btn_UsarCajero.Text = "Usar Cajero";
+            p0_btn_UsarCajero.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // p0_btn_Acceder
             // 
-            button1.Location = new Point(112, 409);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            p0_btn_Acceder.Location = new Point(3, 409);
+            p0_btn_Acceder.Name = "p0_btn_Acceder";
+            p0_btn_Acceder.Size = new Size(94, 29);
+            p0_btn_Acceder.TabIndex = 2;
+            p0_btn_Acceder.Text = "Acceder";
+            p0_btn_Acceder.UseVisualStyleBackColor = true;
+            p0_btn_Acceder.Click += p0_btn_Acceder_Click;
+            // 
+            // p0_lb_Bienvenido
+            // 
+            p0_lb_Bienvenido.AutoSize = true;
+            p0_lb_Bienvenido.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p0_lb_Bienvenido.Location = new Point(21, 33);
+            p0_lb_Bienvenido.Name = "p0_lb_Bienvenido";
+            p0_lb_Bienvenido.Size = new Size(185, 46);
+            p0_lb_Bienvenido.TabIndex = 3;
+            p0_lb_Bienvenido.Text = "Bienvenido";
+            p0_lb_Bienvenido.Click += p0_lb_Bienvenido_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(p0_btn_acceder);
+            Controls.Add(p0_lb_Bienvenido);
+            Controls.Add(p0_btn_Acceder);
+            Controls.Add(p0_btn_UsarCajero);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button p0_btn_acceder;
-        private Button button1;
+        private Button p0_btn_UsarCajero;
+        private Button p0_btn_Acceder;
+        private Label p0_lb_Bienvenido;
     }
 }
