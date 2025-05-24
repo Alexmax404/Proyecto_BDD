@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             p0_btn_acceder = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // p0_btn_acceder
@@ -41,11 +42,21 @@
             p0_btn_acceder.UseVisualStyleBackColor = true;
             p0_btn_acceder.Click += button1_Click_2;
             // 
+            // button1
+            // 
+            button1.Location = new Point(112, 409);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(p0_btn_acceder);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +66,6 @@
         #endregion
 
         private Button p0_btn_acceder;
+        private Button button1;
     }
 }
