@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             p10_pn_loged_user_mm = new Panel();
-            p10_pn_properties = new Panel();
-            p10_lb_nombre = new Label();
-            label2 = new Label();
-            p10_lb_num_cuenta = new Label();
-            label1 = new Label();
-            p10_lb_dineroDisp = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            p10_btn_historial_de_transacciones = new Button();
             button3 = new Button();
-            button4 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            p10_lb_dineroDisp = new Label();
+            label1 = new Label();
+            p10_pn_properties = new Panel();
+            p10_btn_back = new Button();
+            p10_lb_num_cuenta = new Label();
+            p10_lbl_accountNumber = new Label();
+            p10_lb_nombre = new Label();
             p10_pn_loged_user_mm.SuspendLayout();
             p10_pn_properties.SuspendLayout();
             SuspendLayout();
             // 
             // p10_pn_loged_user_mm
             // 
-            p10_pn_loged_user_mm.Controls.Add(button4);
+            p10_pn_loged_user_mm.Controls.Add(p10_btn_historial_de_transacciones);
             p10_pn_loged_user_mm.Controls.Add(button3);
             p10_pn_loged_user_mm.Controls.Add(button2);
             p10_pn_loged_user_mm.Controls.Add(button1);
@@ -58,57 +59,43 @@
             p10_pn_loged_user_mm.Size = new Size(800, 450);
             p10_pn_loged_user_mm.TabIndex = 0;
             // 
-            // p10_pn_properties
+            // p10_btn_historial_de_transacciones
             // 
-            p10_pn_properties.BorderStyle = BorderStyle.FixedSingle;
-            p10_pn_properties.Controls.Add(p10_lb_num_cuenta);
-            p10_pn_properties.Controls.Add(label2);
-            p10_pn_properties.Controls.Add(p10_lb_nombre);
-            p10_pn_properties.Dock = DockStyle.Left;
-            p10_pn_properties.Location = new Point(0, 0);
-            p10_pn_properties.Name = "p10_pn_properties";
-            p10_pn_properties.Size = new Size(155, 450);
-            p10_pn_properties.TabIndex = 0;
+            p10_btn_historial_de_transacciones.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p10_btn_historial_de_transacciones.Location = new Point(176, 404);
+            p10_btn_historial_de_transacciones.Name = "p10_btn_historial_de_transacciones";
+            p10_btn_historial_de_transacciones.Size = new Size(199, 34);
+            p10_btn_historial_de_transacciones.TabIndex = 8;
+            p10_btn_historial_de_transacciones.Text = "Historial de transacciones";
+            p10_btn_historial_de_transacciones.UseVisualStyleBackColor = true;
+            p10_btn_historial_de_transacciones.Click += p10_btn_historial_de_transacciones_Click;
             // 
-            // p10_lb_nombre
+            // button3
             // 
-            p10_lb_nombre.AutoSize = true;
-            p10_lb_nombre.BorderStyle = BorderStyle.FixedSingle;
-            p10_lb_nombre.Location = new Point(55, 167);
-            p10_lb_nombre.Name = "p10_lb_nombre";
-            p10_lb_nombre.Size = new Size(41, 22);
-            p10_lb_nombre.TabIndex = 0;
-            p10_lb_nombre.Text = "*****";
+            button3.Location = new Point(428, 198);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 94);
+            button3.TabIndex = 7;
+            button3.Text = "Tarjetas de crédito";
+            button3.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // button2
             // 
-            label2.AutoSize = true;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Location = new Point(11, 230);
-            label2.Name = "label2";
-            label2.Size = new Size(134, 22);
-            label2.TabIndex = 1;
-            label2.Text = "Numero de cuenta";
+            button2.Location = new Point(303, 198);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 94);
+            button2.TabIndex = 6;
+            button2.Text = "Prestamos";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // p10_lb_num_cuenta
+            // button1
             // 
-            p10_lb_num_cuenta.AutoSize = true;
-            p10_lb_num_cuenta.BorderStyle = BorderStyle.FixedSingle;
-            p10_lb_num_cuenta.Location = new Point(55, 261);
-            p10_lb_num_cuenta.Name = "p10_lb_num_cuenta";
-            p10_lb_num_cuenta.Size = new Size(41, 22);
-            p10_lb_num_cuenta.TabIndex = 2;
-            p10_lb_num_cuenta.Text = "*****";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(176, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(289, 46);
-            label1.TabIndex = 3;
-            label1.Text = "Dinero Disponible";
+            button1.Location = new Point(176, 198);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 94);
+            button1.TabIndex = 5;
+            button1.Text = "Enviar plata";
+            button1.UseVisualStyleBackColor = true;
             // 
             // p10_lb_dineroDisp
             // 
@@ -121,42 +108,68 @@
             p10_lb_dineroDisp.TabIndex = 4;
             p10_lb_dineroDisp.Text = "****";
             // 
-            // button1
+            // label1
             // 
-            button1.Location = new Point(176, 198);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 94);
-            button1.TabIndex = 5;
-            button1.Text = "Enviar plata";
-            button1.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(176, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(289, 46);
+            label1.TabIndex = 3;
+            label1.Text = "Dinero Disponible";
             // 
-            // button2
+            // p10_pn_properties
             // 
-            button2.Location = new Point(303, 198);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 94);
-            button2.TabIndex = 6;
-            button2.Text = "Prestamos";
-            button2.UseVisualStyleBackColor = true;
+            p10_pn_properties.BorderStyle = BorderStyle.FixedSingle;
+            p10_pn_properties.Controls.Add(p10_btn_back);
+            p10_pn_properties.Controls.Add(p10_lb_num_cuenta);
+            p10_pn_properties.Controls.Add(p10_lbl_accountNumber);
+            p10_pn_properties.Controls.Add(p10_lb_nombre);
+            p10_pn_properties.Dock = DockStyle.Left;
+            p10_pn_properties.Location = new Point(0, 0);
+            p10_pn_properties.Name = "p10_pn_properties";
+            p10_pn_properties.Size = new Size(155, 450);
+            p10_pn_properties.TabIndex = 0;
             // 
-            // button3
+            // p10_btn_back
             // 
-            button3.Location = new Point(428, 198);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 94);
-            button3.TabIndex = 7;
-            button3.Text = "Tarjetas de crédito";
-            button3.UseVisualStyleBackColor = true;
+            p10_btn_back.Location = new Point(11, 11);
+            p10_btn_back.Name = "p10_btn_back";
+            p10_btn_back.Size = new Size(31, 31);
+            p10_btn_back.TabIndex = 4;
+            p10_btn_back.Text = "←";
+            p10_btn_back.UseVisualStyleBackColor = true;
+            p10_btn_back.Click += p03_btn_back_Click;
             // 
-            // button4
+            // p10_lb_num_cuenta
             // 
-            button4.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(176, 404);
-            button4.Name = "button4";
-            button4.Size = new Size(199, 34);
-            button4.TabIndex = 8;
-            button4.Text = "Historial de transacciones";
-            button4.UseVisualStyleBackColor = true;
+            p10_lb_num_cuenta.AutoSize = true;
+            p10_lb_num_cuenta.BorderStyle = BorderStyle.FixedSingle;
+            p10_lb_num_cuenta.Location = new Point(55, 261);
+            p10_lb_num_cuenta.Name = "p10_lb_num_cuenta";
+            p10_lb_num_cuenta.Size = new Size(41, 22);
+            p10_lb_num_cuenta.TabIndex = 2;
+            p10_lb_num_cuenta.Text = "*****";
+            // 
+            // p10_lbl_accountNumber
+            // 
+            p10_lbl_accountNumber.AutoSize = true;
+            p10_lbl_accountNumber.BorderStyle = BorderStyle.FixedSingle;
+            p10_lbl_accountNumber.Location = new Point(11, 230);
+            p10_lbl_accountNumber.Name = "p10_lbl_accountNumber";
+            p10_lbl_accountNumber.Size = new Size(134, 22);
+            p10_lbl_accountNumber.TabIndex = 1;
+            p10_lbl_accountNumber.Text = "Numero de cuenta";
+            // 
+            // p10_lb_nombre
+            // 
+            p10_lb_nombre.AutoSize = true;
+            p10_lb_nombre.BorderStyle = BorderStyle.FixedSingle;
+            p10_lb_nombre.Location = new Point(55, 167);
+            p10_lb_nombre.Name = "p10_lb_nombre";
+            p10_lb_nombre.Size = new Size(41, 22);
+            p10_lb_nombre.TabIndex = 0;
+            p10_lb_nombre.Text = "*****";
             // 
             // p10_loged_user_mm
             // 
@@ -177,14 +190,15 @@
 
         private Panel p10_pn_loged_user_mm;
         private Panel p10_pn_properties;
-        private Label label2;
+        private Label p10_lbl_accountNumber;
         private Label p10_lb_nombre;
         private Label p10_lb_num_cuenta;
         private Label label1;
-        private Button button4;
+        private Button p10_btn_historial_de_transacciones;
         private Button button3;
         private Button button2;
         private Button button1;
         private Label p10_lb_dineroDisp;
+        private Button p10_btn_back;
     }
 }
