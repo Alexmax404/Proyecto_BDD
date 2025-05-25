@@ -48,6 +48,7 @@
             p02_btn_login.TabIndex = 0;
             p02_btn_login.Text = "Iniciar Sesion";
             p02_btn_login.UseVisualStyleBackColor = true;
+            p02_btn_login.Click += p02_btn_login_Click;
             // 
             // p02_pn_login
             // 
