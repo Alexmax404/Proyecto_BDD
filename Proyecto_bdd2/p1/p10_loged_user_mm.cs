@@ -29,6 +29,9 @@ namespace Proyecto_bdd2
             {
                 string cuentaBD = cliente.obtenerIdCuentaDesdeUsuario(usuario);
                 p10_lb_num_cuenta.Text = cuentaBD ?? "(no encontrada)";
+
+                Decimal saldo = cliente.obtenerSaldoCuenta(cuentaBD);
+                p10_lb_dineroDisp.Text = saldo.ToString();
             }
             catch (Exception ex)
             {

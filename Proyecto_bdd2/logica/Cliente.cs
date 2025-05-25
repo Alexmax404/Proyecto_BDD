@@ -63,5 +63,25 @@ namespace Proyecto_bdd2.logica
 
             return null; // No se encontró
         }
+        public decimal obtenerSaldoCuenta(string idCuenta)
+        {
+            string consulta = $@"
+        SELECT SALDO
+        FROM CUENTA
+        WHERE ID_CUENTA = '{idCuenta.Replace("'", "''")}'
+        AND ESTADO_CUENTA = 'Activa'";
+
+            DataSet ds = misDatos.ejecutarSELECT(consulta);
+
+            if (ds.Tables["ResultadoDatos"].Rows.Count > 0)
+            {
+                object saldo = ds.Tables["ResultadoDatos"].Rows[0]["SALDO"];
+                if (saldo != null && saldo != DBNull.Value)
+                {
+                    return Convert.ToDecimal(saldo);
+                }
+            }
+            return -1; // Indica error o cuenta no encontrada
+        }
     }
 }
