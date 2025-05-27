@@ -30,9 +30,10 @@
         {
             label1 = new Label();
             p20_cb_creditCard = new ComboBox();
-            label2 = new Label();
             p20_btn_addCreditCard = new Button();
             p20_btn_removeCreditCard = new Button();
+            p20_btn_info = new Button();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             SuspendLayout();
             // 
             // label1
@@ -56,15 +57,6 @@
             p20_cb_creditCard.TabIndex = 9;
             p20_cb_creditCard.SelectedIndexChanged += p20_cb_creditCard_SelectedIndexChanged;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(281, 80);
-            label2.Name = "label2";
-            label2.Size = new Size(18, 20);
-            label2.TabIndex = 10;
-            label2.Text = "...";
-            // 
             // p20_btn_addCreditCard
             // 
             p20_btn_addCreditCard.Location = new Point(168, 209);
@@ -85,14 +77,24 @@
             p20_btn_removeCreditCard.UseVisualStyleBackColor = true;
             p20_btn_removeCreditCard.Click += p20_btn_removeCreditCard_Click;
             // 
+            // p20_btn_info
+            // 
+            p20_btn_info.Location = new Point(525, 235);
+            p20_btn_info.Name = "p20_btn_info";
+            p20_btn_info.Size = new Size(31, 29);
+            p20_btn_info.TabIndex = 13;
+            p20_btn_info.Text = "ℹ";
+            p20_btn_info.UseVisualStyleBackColor = true;
+            p20_btn_info.Click += p20_btn_info_Click;
+            // 
             // p20_creditCards_MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(568, 276);
+            Controls.Add(p20_btn_info);
             Controls.Add(p20_btn_removeCreditCard);
             Controls.Add(p20_btn_addCreditCard);
-            Controls.Add(label2);
             Controls.Add(p20_cb_creditCard);
             Controls.Add(label1);
             Name = "p20_creditCards_MainMenu";
@@ -105,8 +107,9 @@
 
         private Label label1;
         private ComboBox p20_cb_creditCard;
-        private Label label2;
         private Button p20_btn_addCreditCard;
         private Button p20_btn_removeCreditCard;
+        private Button p20_btn_info;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Proyecto_bdd2.logica
 {
@@ -51,6 +52,81 @@ namespace Proyecto_bdd2.logica
             string consulta = "BEGIN tarjeta_pkg.eliminar_tarjeta('" + idTarjeta.Replace("'", "''") + "'); END;";
             return misDatos.ejecutarDML(consulta);
         }
+
+        public DataRow ObtenerDetallesTarjeta(string idTarjeta)
+        {
+            string consulta = $@"
+                SELECT 
+                    t.NUMERO_TARJETA,
+                    TO_CHAR(t.FECHA_VENCIMIENTO, 'MM/YYYY') AS FECHA_VENCIMIENTO,
+                    c.NOMBRE || ' ' || c.APELLIDO AS PROPIETARIO,
+                    t.CVV
+                FROM TARJETA t
+                JOIN CUENTA cu ON t.ID_CUENTA = cu.ID_CUENTA
+                JOIN CLIENTE c ON cu.ID_CLIENTE = c.ID_CLIENTE
+                WHERE t.ID_TARJETA = '{idTarjeta}'";
+
+            DataSet ds = misDatos.ejecutarSELECT(consulta);
+            if (ds.Tables["ResultadoDatos"].Rows.Count > 0)
+            {
+                return ds.Tables["ResultadoDatos"].Rows[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public string ObtenerIdTarjetaPorCuenta(string idCuenta)
+        {
+            string consulta = $@"
+        SELECT ID_TARJETA
+        FROM TARJETA
+        WHERE ID_CUENTA = '{idCuenta}'
+        ORDER BY FECHA_EMISION DESC";  // Asumiendo que quieres la más reciente
+
+            DataSet ds = misDatos.ejecutarSELECT(consulta);
+
+            if (ds.Tables["ResultadoDatos"].Rows.Count > 0)
+            {
+                return ds.Tables["ResultadoDatos"].Rows[0]["ID_TARJETA"].ToString();
+            }
+
+            return null;
+        }
+        public string ObtenerNumeroTarjeta(string numeroTarjeta)
+        {
+            string sql = $"SELECT NUMERO_TARJETA FROM TARJETA WHERE NUMERO_TARJETA = '{numeroTarjeta}'";
+            DataSet ds = misDatos.ejecutarSELECT(sql); // Cambio aquí
+            return ds.Tables["ResultadoDatos"].Rows.Count > 0 ? ds.Tables["ResultadoDatos"].Rows[0][0].ToString() : null;
+        }
+
+        public string ObtenerFechaVencimiento(string numeroTarjeta)
+        {
+            string sql = $"SELECT TO_CHAR(FECHA_VENCIMIENTO, 'MM/YYYY') FROM TARJETA WHERE NUMERO_TARJETA = '{numeroTarjeta}'";
+            DataSet ds = misDatos.ejecutarSELECT(sql); // Cambio aquí
+            return ds.Tables["ResultadoDatos"].Rows.Count > 0 ? ds.Tables["ResultadoDatos"].Rows[0][0].ToString() : null;
+        }
+
+        public string ObtenerCVV(string numeroTarjeta)
+        {
+            string sql = $"SELECT CVV FROM TARJETA WHERE NUMERO_TARJETA = '{numeroTarjeta}'";
+            DataSet ds = misDatos.ejecutarSELECT(sql); // Cambio aquí
+            return ds.Tables["ResultadoDatos"].Rows.Count > 0 ? ds.Tables["ResultadoDatos"].Rows[0][0].ToString() : null;
+        }
+
+        public string ObtenerPropietario(string numeroTarjeta)
+        {
+            string sql = @"
+        SELECT C.NOMBRE AS PROPIETARIO
+        FROM TARJETA T
+        JOIN CUENTA CU ON T.ID_CUENTA = CU.ID_CUENTA
+        JOIN CLIENTE C ON CU.ID_CLIENTE = C.ID_CLIENTE
+        WHERE T.NUMERO_TARJETA = '" + numeroTarjeta + "'";
+
+            DataSet ds = misDatos.ejecutarSELECT(sql);
+            return ds.Tables["ResultadoDatos"].Rows.Count > 0 ? ds.Tables["ResultadoDatos"].Rows[0][0].ToString() : null;
+        }
+
 
 
 
