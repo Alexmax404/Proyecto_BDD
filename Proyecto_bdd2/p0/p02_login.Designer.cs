@@ -37,6 +37,7 @@
             p02_pn = new Panel();
             test_button = new Button();
             p02_btn_back = new Button();
+            admin_button = new Button();
             p02_pn_login.SuspendLayout();
             p02_pn.SuspendLayout();
             SuspendLayout();
@@ -98,6 +99,7 @@
             // 
             // p02_pn
             // 
+            p02_pn.Controls.Add(admin_button);
             p02_pn.Controls.Add(test_button);
             p02_pn.Controls.Add(p02_btn_back);
             p02_pn.Controls.Add(p02_pn_login);
@@ -129,6 +131,18 @@
             p02_btn_back.UseVisualStyleBackColor = true;
             p02_btn_back.Click += p01_btn_back_Click;
             // 
+            // admin_button
+            // 
+            admin_button.BackColor = SystemColors.Control;
+            admin_button.ForeColor = SystemColors.ControlText;
+            admin_button.Location = new Point(649, 355);
+            admin_button.Name = "admin_button";
+            admin_button.Size = new Size(104, 29);
+            admin_button.TabIndex = 5;
+            admin_button.Text = "admin";
+            admin_button.UseVisualStyleBackColor = false;
+            admin_button.Click += admin_button_Click;
+            // 
             // p02_login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -154,5 +168,6 @@
         private Panel p02_pn;
         private Button p02_btn_back;
         private Button test_button;
+        private Button admin_button;
     }
 }
