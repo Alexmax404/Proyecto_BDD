@@ -35,6 +35,7 @@
             p02_tb_numAccount = new TextBox();
             p02_tb_username = new TextBox();
             p02_pn = new Panel();
+            test_button = new Button();
             p02_btn_back = new Button();
             p02_pn_login.SuspendLayout();
             p02_pn.SuspendLayout();
@@ -97,6 +98,7 @@
             // 
             // p02_pn
             // 
+            p02_pn.Controls.Add(test_button);
             p02_pn.Controls.Add(p02_btn_back);
             p02_pn.Controls.Add(p02_pn_login);
             p02_pn.Dock = DockStyle.Fill;
@@ -104,6 +106,18 @@
             p02_pn.Name = "p02_pn";
             p02_pn.Size = new Size(800, 450);
             p02_pn.TabIndex = 2;
+            // 
+            // test_button
+            // 
+            test_button.BackColor = SystemColors.Control;
+            test_button.ForeColor = SystemColors.ControlText;
+            test_button.Location = new Point(649, 275);
+            test_button.Name = "test_button";
+            test_button.Size = new Size(104, 29);
+            test_button.TabIndex = 4;
+            test_button.Text = "test";
+            test_button.UseVisualStyleBackColor = false;
+            test_button.Click += test_button_Click;
             // 
             // p02_btn_back
             // 
@@ -139,5 +153,6 @@
         private TextBox p02_tb_username;
         private Panel p02_pn;
         private Button p02_btn_back;
+        private Button test_button;
     }
 }
