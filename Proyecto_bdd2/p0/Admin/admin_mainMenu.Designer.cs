@@ -30,12 +30,12 @@
         {
             p01_btn_back = new Button();
             panel1 = new Panel();
+            label1 = new Label();
+            admin_btn_sucursales = new Button();
+            admin_btn_cajeros = new Button();
             p10_pn_properties = new Panel();
             p10_btn_back = new Button();
             p10_lbl_accountNumber = new Label();
-            admin_btn_cajeros = new Button();
-            admin_btn_sucursales = new Button();
-            label1 = new Label();
             panel1.SuspendLayout();
             p10_pn_properties.SuspendLayout();
             SuspendLayout();
@@ -61,6 +61,35 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(246, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(211, 46);
+            label1.TabIndex = 10;
+            label1.Text = "Administrar";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // admin_btn_sucursales
+            // 
+            admin_btn_sucursales.Location = new Point(495, 161);
+            admin_btn_sucursales.Name = "admin_btn_sucursales";
+            admin_btn_sucursales.Size = new Size(186, 182);
+            admin_btn_sucursales.TabIndex = 3;
+            admin_btn_sucursales.Text = "Sucursales";
+            admin_btn_sucursales.UseVisualStyleBackColor = true;
+            // 
+            // admin_btn_cajeros
+            // 
+            admin_btn_cajeros.Location = new Point(246, 161);
+            admin_btn_cajeros.Name = "admin_btn_cajeros";
+            admin_btn_cajeros.Size = new Size(186, 182);
+            admin_btn_cajeros.TabIndex = 2;
+            admin_btn_cajeros.Text = "Cajeros";
+            admin_btn_cajeros.UseVisualStyleBackColor = true;
             // 
             // p10_pn_properties
             // 
@@ -91,35 +120,6 @@
             p10_lbl_accountNumber.Size = new Size(55, 22);
             p10_lbl_accountNumber.TabIndex = 1;
             p10_lbl_accountNumber.Text = "Admin";
-            // 
-            // admin_btn_cajeros
-            // 
-            admin_btn_cajeros.Location = new Point(246, 161);
-            admin_btn_cajeros.Name = "admin_btn_cajeros";
-            admin_btn_cajeros.Size = new Size(186, 182);
-            admin_btn_cajeros.TabIndex = 2;
-            admin_btn_cajeros.Text = "Cajeros";
-            admin_btn_cajeros.UseVisualStyleBackColor = true;
-            // 
-            // admin_btn_sucursales
-            // 
-            admin_btn_sucursales.Location = new Point(495, 161);
-            admin_btn_sucursales.Name = "admin_btn_sucursales";
-            admin_btn_sucursales.Size = new Size(186, 182);
-            admin_btn_sucursales.TabIndex = 3;
-            admin_btn_sucursales.Text = "Sucursales";
-            admin_btn_sucursales.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(246, 44);
-            label1.Name = "label1";
-            label1.Size = new Size(211, 46);
-            label1.TabIndex = 10;
-            label1.Text = "Administrar";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // admin_mainMenu
             // 
