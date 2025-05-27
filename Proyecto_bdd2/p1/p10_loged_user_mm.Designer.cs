@@ -30,7 +30,7 @@
         {
             p10_pn_loged_user_mm = new Panel();
             p10_btn_historial_de_transacciones = new Button();
-            button3 = new Button();
+            p10_btn_CreditCard = new Button();
             p10_btn_lendings = new Button();
             p10_btn_sendMoney = new Button();
             p10_lb_dineroDisp = new Label();
@@ -47,7 +47,7 @@
             // p10_pn_loged_user_mm
             // 
             p10_pn_loged_user_mm.Controls.Add(p10_btn_historial_de_transacciones);
-            p10_pn_loged_user_mm.Controls.Add(button3);
+            p10_pn_loged_user_mm.Controls.Add(p10_btn_CreditCard);
             p10_pn_loged_user_mm.Controls.Add(p10_btn_lendings);
             p10_pn_loged_user_mm.Controls.Add(p10_btn_sendMoney);
             p10_pn_loged_user_mm.Controls.Add(p10_lb_dineroDisp);
@@ -70,14 +70,15 @@
             p10_btn_historial_de_transacciones.UseVisualStyleBackColor = true;
             p10_btn_historial_de_transacciones.Click += p10_btn_historial_de_transacciones_Click;
             // 
-            // button3
+            // p10_btn_CreditCard
             // 
-            button3.Location = new Point(428, 198);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 94);
-            button3.TabIndex = 7;
-            button3.Text = "Tarjetas de crédito";
-            button3.UseVisualStyleBackColor = true;
+            p10_btn_CreditCard.Location = new Point(428, 198);
+            p10_btn_CreditCard.Name = "p10_btn_CreditCard";
+            p10_btn_CreditCard.Size = new Size(94, 94);
+            p10_btn_CreditCard.TabIndex = 7;
+            p10_btn_CreditCard.Text = "Tarjetas de crédito";
+            p10_btn_CreditCard.UseVisualStyleBackColor = true;
+            p10_btn_CreditCard.Click += p10_btn_CreditCard_Click;
             // 
             // p10_btn_lendings
             // 
@@ -197,7 +198,7 @@
         private Label p10_lb_num_cuenta;
         private Label label1;
         private Button p10_btn_historial_de_transacciones;
-        private Button button3;
+        private Button p10_btn_CreditCard;
         private Button p10_btn_lendings;
         private Button p10_btn_sendMoney;
         private Label p10_lb_dineroDisp;

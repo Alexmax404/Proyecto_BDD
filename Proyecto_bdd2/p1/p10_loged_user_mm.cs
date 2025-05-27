@@ -1,6 +1,7 @@
 ﻿using Proyecto_bdd2.accesoDatos;
 using Proyecto_bdd2.logica;
 using Proyecto_bdd2.p1;
+using Proyecto_bdd2.p2;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -76,11 +77,20 @@ namespace Proyecto_bdd2
         private void p10_btn_lendings_Click(object sender, EventArgs e)
         {
             this.Hide();
-            p11_lending_mm form2 = new p11_lending_mm(usuario,numCuenta);
+            p11_lending_mm form2 = new p11_lending_mm(usuario, numCuenta);
             form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
             form2.Location = this.Location;                 // Copia la ubicación de Form1
             form2.Show();
 
+            form2.Show();
+        }
+
+        private void p10_btn_CreditCard_Click(object sender, EventArgs e)
+        {
+            p20_creditCards_MainMenu form2 = new p20_creditCards_MainMenu(usuario, numCuenta);
+            form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
+            form2.Location = this.Location;                 // Copia la ubicación de Form1
+            form2.Show();
             form2.Show();
         }
     }
