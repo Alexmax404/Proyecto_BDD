@@ -59,6 +59,7 @@ namespace Proyecto_bdd2.accesoDatos
             miAdaptador.Fill(miDS, "ResultadoDatos");
             return miDS;
         }
+
     }
 
 }

@@ -63,7 +63,7 @@ namespace Proyecto_bdd2.p2
         private void p20_btn_addCreditCard_Click(object sender, EventArgs e)
         {
             this.Hide();
-            p201_creatingCreditCard form2 = new p201_creatingCreditCard(usuario,numCuenta);
+            p201_creatingCreditCard form2 = new p201_creatingCreditCard(usuario, numCuenta);
             form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
             form2.Location = this.Location;                 // Copia la ubicación de Form1
             form2.Show();
@@ -109,7 +109,7 @@ namespace Proyecto_bdd2.p2
             }
 
             // 4. Refrescar ComboBox DE FORMA SEGURA
-            p20_cb_creditCard.DataSource = null;          // 👉 quitar el binding primero
+            p20_cb_creditCard.DataSource = null;          // quitar el binding primero
             p20_cb_creditCard.Items.Clear();              // ahora sí se puede limpiar
 
             DataTable tarjetas = cuenta.ObtenerTarjetasPorCuenta(numCuenta);
@@ -133,5 +133,26 @@ namespace Proyecto_bdd2.p2
             p20_btn_addCreditCard.Enabled = (cantidadTarjetas < 3);
         }
 
+        private void p20_btn_info_Click(object sender, EventArgs e)
+        {
+
+            // Validar que haya una tarjeta seleccionada
+            if (p20_cb_creditCard.SelectedItem == null || p20_cb_creditCard.SelectedValue == null)
+            {
+                MessageBox.Show("Seleccione una tarjeta para ver la información.", "Aviso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Obtener el número de la tarjeta (DisplayMember)
+            string numeroTarjeta = p20_cb_creditCard.Text;
+
+            // Abrir formulario de información
+            this.Hide();
+            p2011_info form2 = new p2011_info(numeroTarjeta);
+            form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
+            form2.Location = this.Location;                  // Copia la ubicación de Form1
+            form2.Show();
+        }
     }
 }
