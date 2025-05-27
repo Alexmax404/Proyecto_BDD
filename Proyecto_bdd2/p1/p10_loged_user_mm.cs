@@ -1,5 +1,6 @@
 ﻿using Proyecto_bdd2.accesoDatos;
 using Proyecto_bdd2.logica;
+using Proyecto_bdd2.p1;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -57,6 +58,30 @@ namespace Proyecto_bdd2
         private void p10_btn_historial_de_transacciones_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void p10_btn_sendMoney_Click(object sender, EventArgs e)
+        {
+            p101_sendMoney form2 = new p101_sendMoney();
+            form2.StartPosition = FormStartPosition.Manual;
+
+            // Centrar respecto al formulario actual
+            form2.Location = new Point(
+                this.Location.X + (this.Width - form2.Width) / 2,
+                this.Location.Y + (this.Height - form2.Height) / 2
+            );
+
+            form2.Show();
+        }
+        private void p10_btn_lendings_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            p11_lending_mm form2 = new p11_lending_mm(usuario,numCuenta);
+            form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
+            form2.Location = this.Location;                 // Copia la ubicación de Form1
+            form2.Show();
+
+            form2.Show();
         }
     }
 }

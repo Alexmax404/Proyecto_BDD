@@ -61,5 +61,15 @@ namespace Proyecto_bdd2
                 MessageBox.Show("Usuario o número de cuenta incorrectos.");
             }
         }
+
+        private void test_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            p10_loged_user_mm form2 = new p10_loged_user_mm("Glenn", "CUE0001");
+
+            form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
+            form2.Location = this.Location;                 // Copia la ubicación de Form1
+            form2.Show();
+        }
     }
 }

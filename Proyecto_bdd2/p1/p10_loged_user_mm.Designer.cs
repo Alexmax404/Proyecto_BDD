@@ -31,8 +31,8 @@
             p10_pn_loged_user_mm = new Panel();
             p10_btn_historial_de_transacciones = new Button();
             button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            p10_btn_lendings = new Button();
+            p10_btn_sendMoney = new Button();
             p10_lb_dineroDisp = new Label();
             label1 = new Label();
             p10_pn_properties = new Panel();
@@ -48,8 +48,8 @@
             // 
             p10_pn_loged_user_mm.Controls.Add(p10_btn_historial_de_transacciones);
             p10_pn_loged_user_mm.Controls.Add(button3);
-            p10_pn_loged_user_mm.Controls.Add(button2);
-            p10_pn_loged_user_mm.Controls.Add(button1);
+            p10_pn_loged_user_mm.Controls.Add(p10_btn_lendings);
+            p10_pn_loged_user_mm.Controls.Add(p10_btn_sendMoney);
             p10_pn_loged_user_mm.Controls.Add(p10_lb_dineroDisp);
             p10_pn_loged_user_mm.Controls.Add(label1);
             p10_pn_loged_user_mm.Controls.Add(p10_pn_properties);
@@ -79,23 +79,25 @@
             button3.Text = "Tarjetas de crédito";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // p10_btn_lendings
             // 
-            button2.Location = new Point(303, 198);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 94);
-            button2.TabIndex = 6;
-            button2.Text = "Prestamos";
-            button2.UseVisualStyleBackColor = true;
+            p10_btn_lendings.Location = new Point(303, 198);
+            p10_btn_lendings.Name = "p10_btn_lendings";
+            p10_btn_lendings.Size = new Size(94, 94);
+            p10_btn_lendings.TabIndex = 6;
+            p10_btn_lendings.Text = "Prestamos";
+            p10_btn_lendings.UseVisualStyleBackColor = true;
+            p10_btn_lendings.Click += p10_btn_lendings_Click;
             // 
-            // button1
+            // p10_btn_sendMoney
             // 
-            button1.Location = new Point(176, 198);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 94);
-            button1.TabIndex = 5;
-            button1.Text = "Enviar plata";
-            button1.UseVisualStyleBackColor = true;
+            p10_btn_sendMoney.Location = new Point(176, 198);
+            p10_btn_sendMoney.Name = "p10_btn_sendMoney";
+            p10_btn_sendMoney.Size = new Size(94, 94);
+            p10_btn_sendMoney.TabIndex = 5;
+            p10_btn_sendMoney.Text = "Enviar plata";
+            p10_btn_sendMoney.UseVisualStyleBackColor = true;
+            p10_btn_sendMoney.Click += p10_btn_sendMoney_Click;
             // 
             // p10_lb_dineroDisp
             // 
@@ -196,8 +198,8 @@
         private Label label1;
         private Button p10_btn_historial_de_transacciones;
         private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button p10_btn_lendings;
+        private Button p10_btn_sendMoney;
         private Label p10_lb_dineroDisp;
         private Button p10_btn_back;
     }
