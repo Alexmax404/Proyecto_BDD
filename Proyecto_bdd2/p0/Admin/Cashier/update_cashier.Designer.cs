@@ -30,19 +30,16 @@
         {
             label4 = new Label();
             label2 = new Label();
-            textBox3 = new TextBox();
-            comboBox1 = new ComboBox();
+            update_lbl_mont_to_add = new TextBox();
+            update_cb_cashier_state = new ComboBox();
             label7 = new Label();
             panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
+            update_btn_cashier = new Button();
             label6 = new Label();
-            label5 = new Label();
-            label1 = new Label();
             panel2 = new Panel();
             label9 = new Label();
-            branch_cb_update_selectID = new ComboBox();
-            branch_cb_updateBranch = new ComboBox();
+            cashier_cb_update_selectID = new ComboBox();
+            cashier_cb_updateBranch = new ComboBox();
             label8 = new Label();
             label3 = new Label();
             panel1.SuspendLayout();
@@ -67,22 +64,23 @@
             label2.TabIndex = 22;
             label2.Text = "Cuanto dinero deseo agregar";
             // 
-            // textBox3
+            // update_lbl_mont_to_add
             // 
-            textBox3.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(12, 164);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(436, 38);
-            textBox3.TabIndex = 21;
+            update_lbl_mont_to_add.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            update_lbl_mont_to_add.Location = new Point(12, 164);
+            update_lbl_mont_to_add.Name = "update_lbl_mont_to_add";
+            update_lbl_mont_to_add.Size = new Size(436, 38);
+            update_lbl_mont_to_add.TabIndex = 21;
             // 
-            // comboBox1
+            // update_cb_cashier_state
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 93);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(203, 28);
-            comboBox1.TabIndex = 26;
+            update_cb_cashier_state.DropDownStyle = ComboBoxStyle.DropDownList;
+            update_cb_cashier_state.FormattingEnabled = true;
+            update_cb_cashier_state.Items.AddRange(new object[] { "Activo", "Inactivo" });
+            update_cb_cashier_state.Location = new Point(12, 93);
+            update_cb_cashier_state.Name = "update_cb_cashier_state";
+            update_cb_cashier_state.Size = new Size(203, 28);
+            update_cb_cashier_state.TabIndex = 26;
             // 
             // label7
             // 
@@ -97,37 +95,26 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(update_btn_cashier);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(update_cb_cashier_state);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(update_lbl_mont_to_add);
             panel1.Controls.Add(label4);
             panel1.Location = new Point(0, 203);
             panel1.Name = "panel1";
             panel1.Size = new Size(459, 387);
             panel1.TabIndex = 34;
             // 
-            // button2
+            // update_btn_cashier
             // 
-            button2.Location = new Point(354, 220);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 53);
-            button2.TabIndex = 37;
-            button2.Text = "Borrar Cajero";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(184, 346);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Actualizar";
-            button1.UseVisualStyleBackColor = true;
+            update_btn_cashier.Location = new Point(181, 227);
+            update_btn_cashier.Name = "update_btn_cashier";
+            update_btn_cashier.Size = new Size(94, 29);
+            update_btn_cashier.TabIndex = 0;
+            update_btn_cashier.Text = "Actualizar";
+            update_btn_cashier.UseVisualStyleBackColor = true;
+            update_btn_cashier.Click += update_btn_cashier_Click;
             // 
             // label6
             // 
@@ -140,29 +127,11 @@
             label6.Text = "Actualizar Datos";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(12, 253);
-            label5.Name = "label5";
-            label5.Size = new Size(18, 20);
-            label5.TabIndex = 25;
-            label5.Text = "...";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 220);
-            label1.Name = "label1";
-            label1.Size = new Size(107, 20);
-            label1.TabIndex = 24;
-            label1.Text = "Ultima recarga";
-            // 
             // panel2
             // 
             panel2.Controls.Add(label9);
-            panel2.Controls.Add(branch_cb_update_selectID);
-            panel2.Controls.Add(branch_cb_updateBranch);
+            panel2.Controls.Add(cashier_cb_update_selectID);
+            panel2.Controls.Add(cashier_cb_updateBranch);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label3);
             panel2.Location = new Point(0, 81);
@@ -181,23 +150,23 @@
             label9.Text = "Seleccione el cajero\r\n";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // branch_cb_update_selectID
+            // cashier_cb_update_selectID
             // 
-            branch_cb_update_selectID.DropDownStyle = ComboBoxStyle.DropDownList;
-            branch_cb_update_selectID.FormattingEnabled = true;
-            branch_cb_update_selectID.Location = new Point(238, 89);
-            branch_cb_update_selectID.Name = "branch_cb_update_selectID";
-            branch_cb_update_selectID.Size = new Size(210, 28);
-            branch_cb_update_selectID.TabIndex = 33;
+            cashier_cb_update_selectID.DropDownStyle = ComboBoxStyle.DropDownList;
+            cashier_cb_update_selectID.FormattingEnabled = true;
+            cashier_cb_update_selectID.Location = new Point(238, 89);
+            cashier_cb_update_selectID.Name = "cashier_cb_update_selectID";
+            cashier_cb_update_selectID.Size = new Size(210, 28);
+            cashier_cb_update_selectID.TabIndex = 33;
             // 
-            // branch_cb_updateBranch
+            // cashier_cb_updateBranch
             // 
-            branch_cb_updateBranch.DropDownStyle = ComboBoxStyle.DropDownList;
-            branch_cb_updateBranch.FormattingEnabled = true;
-            branch_cb_updateBranch.Location = new Point(12, 90);
-            branch_cb_updateBranch.Name = "branch_cb_updateBranch";
-            branch_cb_updateBranch.Size = new Size(203, 28);
-            branch_cb_updateBranch.TabIndex = 32;
+            cashier_cb_updateBranch.DropDownStyle = ComboBoxStyle.DropDownList;
+            cashier_cb_updateBranch.FormattingEnabled = true;
+            cashier_cb_updateBranch.Location = new Point(12, 90);
+            cashier_cb_updateBranch.Name = "cashier_cb_updateBranch";
+            cashier_cb_updateBranch.Size = new Size(203, 28);
+            cashier_cb_updateBranch.TabIndex = 32;
             // 
             // label8
             // 
@@ -221,7 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(460, 590);
+            ClientSize = new Size(460, 495);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label7);
@@ -239,19 +208,16 @@
 
         private Label label4;
         private Label label2;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
+        private TextBox update_lbl_mont_to_add;
+        private ComboBox update_cb_cashier_state;
         private Label label7;
         private Panel panel1;
         private Label label6;
         private Panel panel2;
         private Label label9;
-        private ComboBox branch_cb_update_selectID;
-        private Button button2;
-        private Button button1;
-        private Label label5;
-        private Label label1;
-        private ComboBox branch_cb_updateBranch;
+        private ComboBox cashier_cb_update_selectID;
+        private Button update_btn_cashier;
+        private ComboBox cashier_cb_updateBranch;
         private Label label8;
         private Label label3;
     }

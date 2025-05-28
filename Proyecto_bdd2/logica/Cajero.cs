@@ -44,5 +44,37 @@ namespace Proyecto_bdd2.logica
 
             return misDatos.ejecutarSELECT(sql).Tables["ResultadoDatos"];
         }
+        public string ObtenerEstadoCajero(string idCajero)
+        {
+            string consulta = $"SELECT ESTADO_CAJERO FROM CAJERO WHERE ID_CAJERO = '{idCajero?.Replace("'", "''")}'";
+            DataTable dt = misDatos.ejecutarSELECT(consulta).Tables[0];
+            return dt.Rows.Count > 0 ? dt.Rows[0]["ESTADO_CAJERO"].ToString() : null;
+        }
+
+        public void CambiarEstadoCajero(string idCajero)
+        {
+            string consulta = $"BEGIN cajero_pkg.CAMBIAR_ESTADO_CAJERO('{idCajero?.Replace("'", "''")}'); END;";
+            misDatos.ejecutarDML(consulta);
+        }
+
+        public void AgregarMonto(string idCajero, decimal monto)
+        {
+            string consulta = $"BEGIN cajero_pkg.AGREGAR_MONTO('{idCajero?.Replace("'", "''")}', {monto.ToString(CultureInfo.InvariantCulture)}); END;";
+            misDatos.ejecutarDML(consulta);
+        }
+        public string ObtenerUltimaRecarga(string idCajero)
+        {
+            string consulta = $"SELECT Ultima_Recarga FROM Cajero WHERE ID_Cajero = '{idCajero}'";
+            DataSet resultado = misDatos.ejecutarSELECT(consulta);
+
+            if (resultado.Tables[0].Rows.Count > 0 && resultado.Tables[0].Rows[0]["Ultima_Recarga"] != DBNull.Value)
+            {
+                DateTime ultimaRecarga = Convert.ToDateTime(resultado.Tables[0].Rows[0]["Ultima_Recarga"]);
+                return ultimaRecarga.ToString("dd/MM/yyyy HH:mm"); // o el formato que desees
+            }
+
+            return "Sin recarga";
+        }
+
     }
 }
