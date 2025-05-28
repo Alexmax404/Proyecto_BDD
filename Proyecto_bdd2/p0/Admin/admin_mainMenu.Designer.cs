@@ -81,6 +81,7 @@
             admin_btn_sucursales.TabIndex = 3;
             admin_btn_sucursales.Text = "Sucursales";
             admin_btn_sucursales.UseVisualStyleBackColor = true;
+            admin_btn_sucursales.Click += admin_btn_sucursales_Click;
             // 
             // admin_btn_cajeros
             // 
@@ -90,6 +91,7 @@
             admin_btn_cajeros.TabIndex = 2;
             admin_btn_cajeros.Text = "Cajeros";
             admin_btn_cajeros.UseVisualStyleBackColor = true;
+            admin_btn_cajeros.Click += admin_btn_cajeros_Click;
             // 
             // p10_pn_properties
             // 
