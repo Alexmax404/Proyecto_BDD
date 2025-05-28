@@ -143,7 +143,23 @@ namespace Proyecto_bdd2.logica
 
             return null;
         }
+        public static decimal ObtenerSaldoCuenta(string idCuenta)
+        {
+            Datos datos = new Datos();
+            string consulta = $@"
+            SELECT SALDO 
+            FROM CUENTA 
+            WHERE ID_CUENTA = '{idCuenta}'";
 
+            DataSet ds = datos.ejecutarSELECT(consulta);
+            if (ds.Tables["ResultadoDatos"].Rows.Count > 0)
+            {
+                return Convert.ToDecimal(ds.Tables["ResultadoDatos"].Rows[0]["SALDO"]);
+            }
+
+            // Si no existe la cuenta, devolvemos 0 o podrías lanzar excepción
+            return 0m;
+        }
 
 
 

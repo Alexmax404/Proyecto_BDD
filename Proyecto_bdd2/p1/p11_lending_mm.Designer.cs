@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
+            p11_lbl_message = new Label();
             p11_btn_request = new Button();
             p11_btn_pay = new Button();
             p01_btn_back = new Button();
@@ -38,20 +38,21 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(142, 84);
+            panel1.Controls.Add(p11_lbl_message);
+            panel1.Location = new Point(8, 91);
             panel1.Name = "panel1";
-            panel1.Size = new Size(508, 256);
+            panel1.Size = new Size(652, 271);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // p11_lbl_message
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            p11_lbl_message.AutoSize = true;
+            p11_lbl_message.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p11_lbl_message.Location = new Point(21, 16);
+            p11_lbl_message.Name = "p11_lbl_message";
+            p11_lbl_message.Size = new Size(91, 38);
+            p11_lbl_message.TabIndex = 0;
+            p11_lbl_message.Text = "label1";
             // 
             // p11_btn_request
             // 
@@ -71,6 +72,7 @@
             p11_btn_pay.TabIndex = 2;
             p11_btn_pay.Text = "Pagar prestamo";
             p11_btn_pay.UseVisualStyleBackColor = true;
+            p11_btn_pay.Click += p11_btn_pay_Click;
             // 
             // p01_btn_back
             // 
@@ -101,7 +103,7 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
+        private Label p11_lbl_message;
         private Button p11_btn_request;
         private Button p11_btn_pay;
         private Button p01_btn_back;

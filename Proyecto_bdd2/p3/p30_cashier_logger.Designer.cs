@@ -66,6 +66,7 @@
             // 
             // p30_cb_cashierBranch_chooser
             // 
+            p30_cb_cashierBranch_chooser.DropDownStyle = ComboBoxStyle.DropDownList;
             p30_cb_cashierBranch_chooser.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p30_cb_cashierBranch_chooser.FormattingEnabled = true;
             p30_cb_cashierBranch_chooser.Location = new Point(63, 106);
@@ -86,6 +87,7 @@
             // 
             // p30_cb_cashierChosser
             // 
+            p30_cb_cashierChosser.DropDownStyle = ComboBoxStyle.DropDownList;
             p30_cb_cashierChosser.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p30_cb_cashierChosser.FormattingEnabled = true;
             p30_cb_cashierChosser.Location = new Point(63, 210);
