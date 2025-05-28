@@ -95,7 +95,7 @@
             // branch_tb_phone
             // 
             branch_tb_phone.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            branch_tb_phone.Location = new Point(135, 315);
+            branch_tb_phone.Location = new Point(128, 315);
             branch_tb_phone.Name = "branch_tb_phone";
             branch_tb_phone.Size = new Size(237, 38);
             branch_tb_phone.TabIndex = 22;

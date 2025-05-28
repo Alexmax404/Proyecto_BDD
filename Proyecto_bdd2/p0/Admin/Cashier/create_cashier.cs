@@ -28,24 +28,45 @@ namespace Proyecto_bdd2.p0.Admin
                     cashier_cb_sucursalDeCajero.ValueMember = "ID_Sucursal";
                     cashier_cb_sucursalDeCajero.DataSource = tabla;
                     cashier_cb_sucursalDeCajero.SelectedIndex = 0;
+
+                    cashier_btn_create.Enabled = true; 
                 }
                 else
                 {
                     cashier_cb_sucursalDeCajero.Items.Add("No hay sucursales disponibles");
                     cashier_cb_sucursalDeCajero.SelectedIndex = 0;
                     cashier_cb_sucursalDeCajero.Enabled = false;
-                }
+
+                    cashier_btn_create.Enabled = false; 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar las sucursales: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                cashier_btn_create.Enabled = false; // Por seguridad, deshabilita el botón en caso de error
             }
         }
 
 
+
         private void cashier_btn_create_Click(object sender, EventArgs e)
         {
+            // Validar los campos de texto
+            if (string.IsNullOrWhiteSpace(cashier_tb_monto.Text))
+            {
+                MessageBox.Show("El monto no puede estar vacío.");
+                cashier_tb_monto.Focus();
+                return;
+            }
+            //validar que se seleccione una sucursal
+            if (cashier_cb_sucursalDeCajero.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una sucursal.");
+                cashier_cb_sucursalDeCajero.Focus();
+                return;
+            }
+
             try
             {
                 string idSucursal = cashier_cb_sucursalDeCajero.SelectedValue.ToString();
@@ -62,7 +83,9 @@ namespace Proyecto_bdd2.p0.Admin
                 MessageBox.Show("Error al crear el cajero: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
             this.Close(); // Cerrar el formulario después de crear el cajero
         }
+
     }
 }

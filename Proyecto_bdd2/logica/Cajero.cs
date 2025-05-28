@@ -1,6 +1,7 @@
 ﻿using Proyecto_bdd2.accesoDatos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,17 @@ namespace Proyecto_bdd2.logica
             {
                 throw new Exception("Error al crear el cajero: " + ex.Message);
             }
+
+        }
+        public DataTable ObtenerCajerosPorSucursal(string idSucursal)
+        {
+            string sql = $@"
+        SELECT ID_CAJERO 
+          FROM Cajero 
+         WHERE ID_Sucursal = '{idSucursal.Replace("'", "''")}' 
+         ORDER BY ID_CAJERO";
+
+            return misDatos.ejecutarSELECT(sql).Tables["ResultadoDatos"];
         }
     }
 }

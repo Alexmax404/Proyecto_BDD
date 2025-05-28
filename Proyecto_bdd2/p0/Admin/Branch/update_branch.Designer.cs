@@ -32,6 +32,7 @@
             label9 = new Label();
             branch_cb_pickABranch = new ComboBox();
             panel1 = new Panel();
+            lbl_id = new Label();
             label8 = new Label();
             branch_tb_update_address = new TextBox();
             label3 = new Label();
@@ -44,7 +45,6 @@
             branch_tb_update_name = new TextBox();
             label4 = new Label();
             label7 = new Label();
-            lbl_id = new Label();
             panelBackground.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -96,6 +96,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(459, 387);
             panel1.TabIndex = 36;
+            // 
+            // lbl_id
+            // 
+            lbl_id.AutoSize = true;
+            lbl_id.Location = new Point(21, 237);
+            lbl_id.Name = "lbl_id";
+            lbl_id.Size = new Size(0, 20);
+            lbl_id.TabIndex = 42;
             // 
             // label8
             // 
@@ -164,6 +172,7 @@
             // 
             // branch_cb_update_state
             // 
+            branch_cb_update_state.DropDownStyle = ComboBoxStyle.DropDownList;
             branch_cb_update_state.FormattingEnabled = true;
             branch_cb_update_state.Items.AddRange(new object[] { "Abierta", "Cerrado" });
             branch_cb_update_state.Location = new Point(12, 93);
@@ -207,14 +216,6 @@
             label7.TabIndex = 37;
             label7.Text = "Actualizar Sucursal";
             label7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lbl_id
-            // 
-            lbl_id.AutoSize = true;
-            lbl_id.Location = new Point(21, 237);
-            lbl_id.Name = "lbl_id";
-            lbl_id.Size = new Size(0, 20);
-            lbl_id.TabIndex = 42;
             // 
             // update_branch
             // 
