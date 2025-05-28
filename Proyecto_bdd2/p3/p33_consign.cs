@@ -19,7 +19,7 @@ namespace Proyecto_bdd2.p3
             idCuenta = idCuentaRecibida;
             idCajero = idCajeroRecibido;
 
-            p33_btn_enviar.Click += p33_btn_enviar_Click;
+            //p33_btn_enviar.Click += p33_btn_enviar_Click;
         }
 
         private void p33_btn_enviar_Click(object sender, EventArgs e)
