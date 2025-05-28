@@ -126,7 +126,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 232);
+            ClientSize = new Size(480, 244);
             Controls.Add(p2011_lbl_cvv);
             Controls.Add(label9);
             Controls.Add(p2011_lbl_noTarjeta);

@@ -51,7 +51,7 @@
             // 
             // p03_tb_phone
             // 
-            p03_tb_phone.Font = new Font("Segoe UI", 16.2F);
+            p03_tb_phone.Font = new Font("Yu Gothic UI", 16.2F);
             p03_tb_phone.Location = new Point(14, 112);
             p03_tb_phone.Name = "p03_tb_phone";
             p03_tb_phone.PlaceholderText = "Teléfono";
@@ -60,7 +60,7 @@
             // 
             // p03_tb_email
             // 
-            p03_tb_email.Font = new Font("Segoe UI", 16.2F);
+            p03_tb_email.Font = new Font("Yu Gothic UI", 16.2F);
             p03_tb_email.Location = new Point(14, 63);
             p03_tb_email.Name = "p03_tb_email";
             p03_tb_email.PlaceholderText = "Correo";
@@ -70,7 +70,7 @@
             // p03_tb_name
             // 
             p03_tb_name.AccessibleName = "";
-            p03_tb_name.Font = new Font("Segoe UI", 16.2F);
+            p03_tb_name.Font = new Font("Yu Gothic UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p03_tb_name.Location = new Point(14, 14);
             p03_tb_name.Name = "p03_tb_name";
             p03_tb_name.PlaceholderText = "Nombre Completo";
@@ -79,6 +79,7 @@
             // 
             // p03_btn_register
             // 
+            p03_btn_register.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p03_btn_register.Location = new Point(350, 399);
             p03_btn_register.Name = "p03_btn_register";
             p03_btn_register.Size = new Size(124, 39);

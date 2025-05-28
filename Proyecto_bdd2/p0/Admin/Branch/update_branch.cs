@@ -72,27 +72,7 @@ namespace Proyecto_bdd2.p0.Admin.Branch
             }
         }
 
-        private void DeshabilitarTodosLosControles()
-        {
-            branch_cb_pickABranch.Enabled = false;
-            branch_tb_update_name.Enabled = false;
-            branch_tb_update_address.Enabled = false;
-            branch_tb_update_phone.Enabled = false;
-            branch_cb_update_state.Enabled = false;
-            branch_btn_update.Enabled = false;
-            branch_btn_delete.Enabled = false;
-        }
 
-        private void HabilitarControles()
-        {
-            branch_cb_pickABranch.Enabled = true;
-            branch_tb_update_name.Enabled = true;
-            branch_tb_update_address.Enabled = true;
-            branch_tb_update_phone.Enabled = true;
-            branch_cb_update_state.Enabled = true;
-            branch_btn_update.Enabled = true; // Ahora se habilita junto con los demás
-            branch_btn_delete.Enabled = true;
-        }
 
         private void CargarDatosSucursal(string nombreSucursal)
         {
@@ -156,11 +136,12 @@ namespace Proyecto_bdd2.p0.Admin.Branch
             {
                 // 3) Llamada al método
                 sucursal.ActualizarSucursal(
-                   nombreOriginal,
-                   nuevoNombre,
-                   direccion,
-                   telefono
-               );
+                    nombreOriginal,
+                    nuevoNombre,
+                    direccion,
+                    telefono,
+                    branch_cb_update_state.SelectedItem?.ToString() ?? "Activo" // Por defecto "Activo"
+                );
                 MessageBox.Show("Sucursal actualizada correctamente",
                 "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -178,40 +159,96 @@ namespace Proyecto_bdd2.p0.Admin.Branch
 
         private void branch_btn_delete_Click(object sender, EventArgs e)
         {
-            if (branch_cb_pickABranch.SelectedValue == null)
+            string nombreSucursal = branch_cb_pickABranch.SelectedValue?.ToString();
+            string idSucursal = sucursal.ObtenerIdPorNombre(nombreSucursal);
+
+            if (string.IsNullOrEmpty(idSucursal))
             {
-                MessageBox.Show("Por favor seleccione una sucursal para eliminar.", "Advertencia",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor selecciona una sucursal válida.", "Advertencia");
                 return;
             }
 
-            string nombreSucursal = branch_cb_pickABranch.SelectedValue.ToString();
-
-            DialogResult resultado = MessageBox.Show(
-                $"¿Estás seguro de que deseas eliminar la sucursal \"{nombreSucursal}\"?",
-                "Confirmar eliminación",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (resultado == DialogResult.Yes)
+            if (MessageBox.Show("¿Seguro que quieres eliminar esta sucursal?",
+                                "Confirmar",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 try
                 {
-                    sucursal.EliminarSucursal(nombreSucursal);
+                    sucursal.EliminarSucursalPorId(idSucursal);
+                    MessageBox.Show("Sucursal eliminada correctamente.");
 
-                    MessageBox.Show("Sucursal eliminada correctamente.", "Éxito",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    this.Close(); // <- Cierra la ventana antes de hacer cualquier otra cosa
+                    // Recargar y actualizar interfaz
+                    CargarSucursalesEnComboBox();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al eliminar la sucursal: " + ex.Message, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al eliminar: " + ex.Message);
                 }
+            }
+            this.Hide();
+        }
+
+
+        private void DeshabilitarTodosLosControles()
+        {
+            // Limpiar campos
+            branch_tb_update_name.Text = string.Empty;
+            branch_tb_update_address.Text = string.Empty;
+            branch_tb_update_phone.Text = string.Empty;
+            branch_cb_update_state.SelectedIndex = -1;
+            lbl_id.Text = "ID: ";
+
+            // Deshabilitar controles
+            branch_cb_pickABranch.Enabled = false;
+            branch_tb_update_name.Enabled = false;
+            branch_tb_update_address.Enabled = false;
+            branch_tb_update_phone.Enabled = false;
+            branch_cb_update_state.Enabled = false;
+            branch_btn_update.Enabled = false;
+            branch_btn_delete.Enabled = false;
+        }
+
+        private void CargarSucursalesEnComboBox()
+        {
+            DataTable tabla = sucursal.ObtenerTodasLasSucursales();
+
+            if (tabla.Rows.Count > 0)
+            {
+                branch_cb_pickABranch.DisplayMember = "Nombre";
+                branch_cb_pickABranch.ValueMember = "ID_Sucursal";
+                branch_cb_pickABranch.DataSource = tabla;
+
+                branch_cb_pickABranch.Enabled = true;
+                HabilitarControles();
+
+                // Seleccionar la primera sucursal y cargar sus datos
+                branch_cb_pickABranch.SelectedIndex = 0;
+                CargarDatosSucursal(tabla.Rows[0]["Nombre"].ToString());
+            }
+            else
+            {
+                branch_cb_pickABranch.DataSource = null;
+                branch_cb_pickABranch.Items.Clear();
+                branch_cb_pickABranch.Items.Add("No hay sucursales disponibles");
+                branch_cb_pickABranch.SelectedIndex = 0;
+                branch_cb_pickABranch.Enabled = false;
+
+                DeshabilitarTodosLosControles();
             }
         }
 
+
+        private void HabilitarControles()
+        {
+            branch_cb_pickABranch.Enabled = true;
+            branch_tb_update_name.Enabled = true;
+            branch_tb_update_address.Enabled = true;
+            branch_tb_update_phone.Enabled = true;
+            branch_cb_update_state.Enabled = true;
+            branch_btn_update.Enabled = true; // Ahora se habilita junto con los demás
+            branch_btn_delete.Enabled = true;
+        }
 
     }
 }

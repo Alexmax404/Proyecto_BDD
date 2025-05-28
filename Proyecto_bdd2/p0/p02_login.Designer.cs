@@ -35,15 +35,16 @@
             p02_tb_numAccount = new TextBox();
             p02_tb_username = new TextBox();
             p02_pn = new Panel();
+            admin_button = new Button();
             test_button = new Button();
             p02_btn_back = new Button();
-            admin_button = new Button();
             p02_pn_login.SuspendLayout();
             p02_pn.SuspendLayout();
             SuspendLayout();
             // 
             // p02_btn_login
             // 
+            p02_btn_login.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p02_btn_login.Location = new Point(61, 282);
             p02_btn_login.Name = "p02_btn_login";
             p02_btn_login.Size = new Size(132, 29);
@@ -68,6 +69,7 @@
             // p03_lb_numAccount
             // 
             p03_lb_numAccount.AutoSize = true;
+            p03_lb_numAccount.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p03_lb_numAccount.Location = new Point(61, 130);
             p03_lb_numAccount.Name = "p03_lb_numAccount";
             p03_lb_numAccount.Size = new Size(132, 20);
@@ -77,6 +79,7 @@
             // p03_lb_user
             // 
             p03_lb_user.AutoSize = true;
+            p03_lb_user.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p03_lb_user.Location = new Point(95, 60);
             p03_lb_user.Name = "p03_lb_user";
             p03_lb_user.Size = new Size(59, 20);
@@ -85,16 +88,18 @@
             // 
             // p02_tb_numAccount
             // 
-            p02_tb_numAccount.Location = new Point(59, 153);
+            p02_tb_numAccount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p02_tb_numAccount.Location = new Point(39, 153);
             p02_tb_numAccount.Name = "p02_tb_numAccount";
-            p02_tb_numAccount.Size = new Size(132, 27);
+            p02_tb_numAccount.Size = new Size(175, 34);
             p02_tb_numAccount.TabIndex = 2;
             // 
             // p02_tb_username
             // 
-            p02_tb_username.Location = new Point(61, 83);
+            p02_tb_username.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p02_tb_username.Location = new Point(39, 83);
             p02_tb_username.Name = "p02_tb_username";
-            p02_tb_username.Size = new Size(132, 27);
+            p02_tb_username.Size = new Size(175, 34);
             p02_tb_username.TabIndex = 1;
             // 
             // p02_pn
@@ -108,6 +113,18 @@
             p02_pn.Name = "p02_pn";
             p02_pn.Size = new Size(800, 450);
             p02_pn.TabIndex = 2;
+            // 
+            // admin_button
+            // 
+            admin_button.BackColor = SystemColors.Control;
+            admin_button.ForeColor = SystemColors.ControlText;
+            admin_button.Location = new Point(649, 355);
+            admin_button.Name = "admin_button";
+            admin_button.Size = new Size(104, 29);
+            admin_button.TabIndex = 5;
+            admin_button.Text = "admin";
+            admin_button.UseVisualStyleBackColor = false;
+            admin_button.Click += admin_button_Click;
             // 
             // test_button
             // 
@@ -130,18 +147,6 @@
             p02_btn_back.Text = "←";
             p02_btn_back.UseVisualStyleBackColor = true;
             p02_btn_back.Click += p01_btn_back_Click;
-            // 
-            // admin_button
-            // 
-            admin_button.BackColor = SystemColors.Control;
-            admin_button.ForeColor = SystemColors.ControlText;
-            admin_button.Location = new Point(649, 355);
-            admin_button.Name = "admin_button";
-            admin_button.Size = new Size(104, 29);
-            admin_button.TabIndex = 5;
-            admin_button.Text = "admin";
-            admin_button.UseVisualStyleBackColor = false;
-            admin_button.Click += admin_button_Click;
             // 
             // p02_login
             // 

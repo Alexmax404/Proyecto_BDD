@@ -81,20 +81,23 @@ namespace Proyecto_bdd2.logica
         /// Llama al procedimiento PL/SQL sucursal_pkg.actualizar_sucursal
         /// mediante un bloque anónimo, usando ejecutarDML.
         /// </summary>
-        public void ActualizarSucursal(string nombreOriginal,
-                                       string nuevoNombre,
-                                       string direccion,
-                                       string telefono)
+        public void ActualizarSucursal(
+        string nombreOriginal,
+        string nuevoNombre,
+        string direccion,
+        string telefono,
+        string estado)
         {
-            // 1) Obtén el ID de la sucursal
+            // 1) Obtener el ID de la sucursal
             string idSucursal = ObtenerIdPorNombre(nombreOriginal);
 
-            // 2) Escapa comillas simples en los valores
+            // 2) Escapar apóstrofes para evitar errores de sintaxis
             nuevoNombre = nuevoNombre.Replace("'", "''");
             direccion = direccion.Replace("'", "''");
             telefono = telefono.Replace("'", "''");
+            estado = estado.Replace("'", "''");
 
-            // 3) Construye el bloque PL/SQL anónimo
+            // 3) Llamar al procedimiento PL/SQL para nombre, dirección y teléfono
             string plsql = $@"
 BEGIN
     sucursal_pkg.actualizar_sucursal(
@@ -104,25 +107,28 @@ BEGIN
         '{telefono}'
     );
 END;";
+            misDatos.ejecutarDML(plsql);
 
-            // 4) Ejecuta y devuelve true si afectó al menos 1 fila
-             misDatos.ejecutarDML(plsql);
-
+            // 4) Actualizar el estado directamente con un UPDATE
+            string sqlEstado = $@"
+UPDATE SUCURSAL
+   SET ESTADO_SUCURSAL = '{estado}'
+ WHERE ID_SUCURSAL = '{idSucursal}'";
+            misDatos.ejecutarDML(sqlEstado);
         }
-        public void EliminarSucursal(string nombreSucursal)
-        {
-            // Obtener el ID de la sucursal desde su nombre
-            string idSucursal = ObtenerIdPorNombre(nombreSucursal);
 
-            // Crear el bloque PL/SQL para ejecutar el procedimiento
+        /// <summary>
+        /// Elimina la sucursal cuyo ID ya conocemos (p_id_sucursal VARCHAR2).
+        /// </summary>
+        public void EliminarSucursalPorId(string idSucursal)
+        {
             string plsql = $@"
 BEGIN
     sucursal_pkg.eliminar_sucursal('{idSucursal}');
 END;";
-
-            // Ejecutar la instrucción
             misDatos.ejecutarDML(plsql);
         }
+
 
 
     }
