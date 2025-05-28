@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            p01_btn_back = new Button();
             panel2 = new Panel();
-            label3 = new Label();
+            p31_btn_enter = new Button();
+            p31_lbl_chasierNum = new Label();
             p03_tb_name = new TextBox();
             label2 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(p01_btn_back);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -47,11 +49,21 @@
             panel1.Size = new Size(800, 450);
             panel1.TabIndex = 0;
             // 
+            // p01_btn_back
+            // 
+            p01_btn_back.Location = new Point(12, 12);
+            p01_btn_back.Name = "p01_btn_back";
+            p01_btn_back.Size = new Size(31, 31);
+            p01_btn_back.TabIndex = 12;
+            p01_btn_back.Text = "←";
+            p01_btn_back.UseVisualStyleBackColor = true;
+            p01_btn_back.Click += p01_btn_back_Click;
+            // 
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(label3);
+            panel2.Controls.Add(p31_btn_enter);
+            panel2.Controls.Add(p31_lbl_chasierNum);
             panel2.Controls.Add(p03_tb_name);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(169, 0);
@@ -59,16 +71,26 @@
             panel2.Size = new Size(461, 450);
             panel2.TabIndex = 0;
             // 
-            // label3
+            // p31_btn_enter
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(211, 34);
-            label3.Name = "label3";
-            label3.Size = new Size(44, 31);
-            label3.TabIndex = 13;
-            label3.Text = "***";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            p31_btn_enter.Location = new Point(174, 364);
+            p31_btn_enter.Name = "p31_btn_enter";
+            p31_btn_enter.Size = new Size(94, 29);
+            p31_btn_enter.TabIndex = 14;
+            p31_btn_enter.Text = "Entrar";
+            p31_btn_enter.UseVisualStyleBackColor = true;
+            p31_btn_enter.Click += p31_btn_enter_Click;
+            // 
+            // p31_lbl_chasierNum
+            // 
+            p31_lbl_chasierNum.AutoSize = true;
+            p31_lbl_chasierNum.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            p31_lbl_chasierNum.Location = new Point(124, 37);
+            p31_lbl_chasierNum.Name = "p31_lbl_chasierNum";
+            p31_lbl_chasierNum.Size = new Size(44, 31);
+            p31_lbl_chasierNum.TabIndex = 13;
+            p31_lbl_chasierNum.Text = "***";
+            p31_lbl_chasierNum.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p03_tb_name
             // 
@@ -90,15 +112,6 @@
             label2.Text = "Ingrese el numero de su tarjeta\r\npara ingresar al cajero\r\n";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
-            // 
-            button1.Location = new Point(188, 363);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 14;
-            button1.Text = "Entrar";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // p31_cashier_verify
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -119,7 +132,8 @@
         private Panel panel2;
         private Label label2;
         private TextBox p03_tb_name;
-        private Label label3;
-        private Button button1;
+        private Label p31_lbl_chasierNum;
+        private Button p31_btn_enter;
+        private Button p01_btn_back;
     }
 }

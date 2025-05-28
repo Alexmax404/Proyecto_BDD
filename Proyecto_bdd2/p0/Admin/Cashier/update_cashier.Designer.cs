@@ -76,7 +76,6 @@
             // 
             update_cb_cashier_state.DropDownStyle = ComboBoxStyle.DropDownList;
             update_cb_cashier_state.FormattingEnabled = true;
-            update_cb_cashier_state.Items.AddRange(new object[] { "Activo", "Inactivo" });
             update_cb_cashier_state.Location = new Point(12, 93);
             update_cb_cashier_state.Name = "update_cb_cashier_state";
             update_cb_cashier_state.Size = new Size(203, 28);

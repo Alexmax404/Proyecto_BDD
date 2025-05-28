@@ -126,6 +126,24 @@ namespace Proyecto_bdd2.logica
             DataSet ds = misDatos.ejecutarSELECT(sql);
             return ds.Tables["ResultadoDatos"].Rows.Count > 0 ? ds.Tables["ResultadoDatos"].Rows[0][0].ToString() : null;
         }
+        public string ObtenerNombrePorIdCuenta(string idCuenta)
+        {
+            string consulta = $@"
+        SELECT C.NOMBRE
+        FROM CUENTA CU
+        JOIN CLIENTE C ON CU.ID_CLIENTE = C.ID_CLIENTE
+        WHERE CU.ID_CUENTA = '{idCuenta.Replace("'", "''")}'";
+
+            DataSet ds = misDatos.ejecutarSELECT(consulta);
+
+            if (ds.Tables["ResultadoDatos"].Rows.Count > 0)
+            {
+                return ds.Tables["ResultadoDatos"].Rows[0]["NOMBRE"].ToString();
+            }
+
+            return null;
+        }
+
 
 
 
