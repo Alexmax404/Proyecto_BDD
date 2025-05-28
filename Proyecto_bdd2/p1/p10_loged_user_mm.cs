@@ -63,7 +63,7 @@ namespace Proyecto_bdd2
 
         private void p10_btn_sendMoney_Click(object sender, EventArgs e)
         {
-            p101_sendMoney form2 = new p101_sendMoney();
+            p101_sendMoney form2 = new p101_sendMoney(numCuenta);
             form2.StartPosition = FormStartPosition.Manual;
 
             // Centrar respecto al formulario actual

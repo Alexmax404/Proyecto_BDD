@@ -36,7 +36,7 @@
             // 
             // p111_tb_moneyToLend
             // 
-            p111_tb_moneyToLend.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p111_tb_moneyToLend.Font = new Font("Yu Gothic UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p111_tb_moneyToLend.Location = new Point(12, 140);
             p111_tb_moneyToLend.Name = "p111_tb_moneyToLend";
             p111_tb_moneyToLend.Size = new Size(237, 38);
@@ -45,6 +45,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(12, 117);
             label2.Name = "label2";
             label2.Size = new Size(146, 20);
@@ -53,6 +54,7 @@
             // 
             // p111_btn_request
             // 
+            p111_btn_request.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p111_btn_request.Location = new Point(82, 214);
             p111_btn_request.Name = "p111_btn_request";
             p111_btn_request.Size = new Size(94, 29);
@@ -64,10 +66,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Yu Gothic UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(42, 9);
             label1.Name = "label1";
-            label1.Size = new Size(171, 92);
+            label1.Size = new Size(166, 92);
             label1.TabIndex = 7;
             label1.Text = "Pide tu\r\nprestamo";
             label1.TextAlign = ContentAlignment.MiddleCenter;

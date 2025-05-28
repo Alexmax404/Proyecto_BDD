@@ -37,10 +37,11 @@
             // p201_cb_CardType
             // 
             p201_cb_CardType.DropDownStyle = ComboBoxStyle.DropDownList;
+            p201_cb_CardType.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p201_cb_CardType.FormattingEnabled = true;
             p201_cb_CardType.Location = new Point(95, 133);
             p201_cb_CardType.Name = "p201_cb_CardType";
-            p201_cb_CardType.Size = new Size(241, 28);
+            p201_cb_CardType.Size = new Size(241, 36);
             p201_cb_CardType.TabIndex = 0;
             // 
             // label1
@@ -65,7 +66,8 @@
             // 
             // p201_btn_addCreditCard
             // 
-            p201_btn_addCreditCard.Location = new Point(168, 219);
+            p201_btn_addCreditCard.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p201_btn_addCreditCard.Location = new Point(170, 190);
             p201_btn_addCreditCard.Name = "p201_btn_addCreditCard";
             p201_btn_addCreditCard.Size = new Size(94, 29);
             p201_btn_addCreditCard.TabIndex = 11;
@@ -77,7 +79,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(435, 300);
+            ClientSize = new Size(435, 246);
             Controls.Add(p201_btn_addCreditCard);
             Controls.Add(label2);
             Controls.Add(label1);

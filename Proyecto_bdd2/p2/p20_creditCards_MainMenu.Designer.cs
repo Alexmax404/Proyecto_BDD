@@ -40,26 +40,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(89, 9);
+            label1.Location = new Point(129, 9);
             label1.Name = "label1";
-            label1.Size = new Size(385, 46);
+            label1.Size = new Size(215, 46);
             label1.TabIndex = 8;
-            label1.Text = "Tus Tarjetas De Crédito";
+            label1.Text = "Tus Tarjetas ";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p20_cb_creditCard
             // 
             p20_cb_creditCard.DropDownStyle = ComboBoxStyle.DropDownList;
+            p20_cb_creditCard.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p20_cb_creditCard.FormattingEnabled = true;
-            p20_cb_creditCard.Location = new Point(168, 124);
+            p20_cb_creditCard.Location = new Point(39, 77);
             p20_cb_creditCard.Name = "p20_cb_creditCard";
-            p20_cb_creditCard.Size = new Size(232, 28);
+            p20_cb_creditCard.Size = new Size(385, 36);
             p20_cb_creditCard.TabIndex = 9;
             p20_cb_creditCard.SelectedIndexChanged += p20_cb_creditCard_SelectedIndexChanged;
             // 
             // p20_btn_addCreditCard
             // 
-            p20_btn_addCreditCard.Location = new Point(168, 209);
+            p20_btn_addCreditCard.Location = new Point(118, 130);
             p20_btn_addCreditCard.Name = "p20_btn_addCreditCard";
             p20_btn_addCreditCard.Size = new Size(94, 55);
             p20_btn_addCreditCard.TabIndex = 11;
@@ -69,7 +70,7 @@
             // 
             // p20_btn_removeCreditCard
             // 
-            p20_btn_removeCreditCard.Location = new Point(306, 209);
+            p20_btn_removeCreditCard.Location = new Point(263, 130);
             p20_btn_removeCreditCard.Name = "p20_btn_removeCreditCard";
             p20_btn_removeCreditCard.Size = new Size(94, 55);
             p20_btn_removeCreditCard.TabIndex = 12;
@@ -79,7 +80,7 @@
             // 
             // p20_btn_info
             // 
-            p20_btn_info.Location = new Point(525, 235);
+            p20_btn_info.Location = new Point(393, 156);
             p20_btn_info.Name = "p20_btn_info";
             p20_btn_info.Size = new Size(31, 29);
             p20_btn_info.TabIndex = 13;
@@ -91,7 +92,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(568, 276);
+            ClientSize = new Size(468, 209);
             Controls.Add(p20_btn_info);
             Controls.Add(p20_btn_removeCreditCard);
             Controls.Add(p20_btn_addCreditCard);

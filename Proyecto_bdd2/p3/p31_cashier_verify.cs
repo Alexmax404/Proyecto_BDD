@@ -31,7 +31,11 @@ namespace Proyecto_bdd2.p3
 
         private void p01_btn_back_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            p00_mainMenu form2 = new p00_mainMenu();
+            form2.StartPosition = FormStartPosition.Manual;  // Para poder fijar la ubicación
+            form2.Location = this.Location;                 // Copia la ubicación de Form1
+            form2.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -66,10 +66,11 @@
             // 
             // p30_cb_cashierBranch_chooser
             // 
+            p30_cb_cashierBranch_chooser.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p30_cb_cashierBranch_chooser.FormattingEnabled = true;
             p30_cb_cashierBranch_chooser.Location = new Point(63, 106);
             p30_cb_cashierBranch_chooser.Name = "p30_cb_cashierBranch_chooser";
-            p30_cb_cashierBranch_chooser.Size = new Size(388, 28);
+            p30_cb_cashierBranch_chooser.Size = new Size(388, 36);
             p30_cb_cashierBranch_chooser.TabIndex = 16;
             // 
             // label3
@@ -85,10 +86,11 @@
             // 
             // p30_cb_cashierChosser
             // 
+            p30_cb_cashierChosser.Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p30_cb_cashierChosser.FormattingEnabled = true;
             p30_cb_cashierChosser.Location = new Point(63, 210);
             p30_cb_cashierChosser.Name = "p30_cb_cashierChosser";
-            p30_cb_cashierChosser.Size = new Size(388, 28);
+            p30_cb_cashierChosser.Size = new Size(388, 36);
             p30_cb_cashierChosser.TabIndex = 14;
             // 
             // label2
@@ -125,6 +127,7 @@
             // 
             // p30_btn_send
             // 
+            p30_btn_send.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p30_btn_send.Location = new Point(302, 409);
             p30_btn_send.Name = "p30_btn_send";
             p30_btn_send.Size = new Size(183, 29);

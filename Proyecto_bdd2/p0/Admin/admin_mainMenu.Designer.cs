@@ -35,7 +35,6 @@
             admin_btn_cajeros = new Button();
             p10_pn_properties = new Panel();
             p10_btn_back = new Button();
-            p10_lbl_accountNumber = new Label();
             panel1.SuspendLayout();
             p10_pn_properties.SuspendLayout();
             SuspendLayout();
@@ -97,7 +96,6 @@
             // 
             p10_pn_properties.BorderStyle = BorderStyle.FixedSingle;
             p10_pn_properties.Controls.Add(p10_btn_back);
-            p10_pn_properties.Controls.Add(p10_lbl_accountNumber);
             p10_pn_properties.Dock = DockStyle.Left;
             p10_pn_properties.Location = new Point(0, 0);
             p10_pn_properties.Name = "p10_pn_properties";
@@ -113,16 +111,6 @@
             p10_btn_back.Text = "←";
             p10_btn_back.UseVisualStyleBackColor = true;
             // 
-            // p10_lbl_accountNumber
-            // 
-            p10_lbl_accountNumber.AutoSize = true;
-            p10_lbl_accountNumber.BorderStyle = BorderStyle.FixedSingle;
-            p10_lbl_accountNumber.Location = new Point(45, 241);
-            p10_lbl_accountNumber.Name = "p10_lbl_accountNumber";
-            p10_lbl_accountNumber.Size = new Size(55, 22);
-            p10_lbl_accountNumber.TabIndex = 1;
-            p10_lbl_accountNumber.Text = "Admin";
-            // 
             // admin_mainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -135,7 +123,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             p10_pn_properties.ResumeLayout(false);
-            p10_pn_properties.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -147,7 +134,6 @@
         private Button admin_btn_cajeros;
         private Panel p10_pn_properties;
         private Button p10_btn_back;
-        private Label p10_lbl_accountNumber;
         private Label label1;
     }
 }

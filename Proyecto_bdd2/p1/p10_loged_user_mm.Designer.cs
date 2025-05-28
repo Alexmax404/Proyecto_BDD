@@ -59,6 +59,7 @@
             // 
             // p10_btn_CreditCard
             // 
+            p10_btn_CreditCard.Font = new Font("Yu Gothic UI", 9F);
             p10_btn_CreditCard.Location = new Point(428, 198);
             p10_btn_CreditCard.Name = "p10_btn_CreditCard";
             p10_btn_CreditCard.Size = new Size(94, 94);
@@ -69,6 +70,7 @@
             // 
             // p10_btn_lendings
             // 
+            p10_btn_lendings.Font = new Font("Yu Gothic UI", 9F);
             p10_btn_lendings.Location = new Point(303, 198);
             p10_btn_lendings.Name = "p10_btn_lendings";
             p10_btn_lendings.Size = new Size(94, 94);
@@ -79,6 +81,7 @@
             // 
             // p10_btn_sendMoney
             // 
+            p10_btn_sendMoney.Font = new Font("Yu Gothic UI", 9F);
             p10_btn_sendMoney.Location = new Point(176, 198);
             p10_btn_sendMoney.Name = "p10_btn_sendMoney";
             p10_btn_sendMoney.Size = new Size(94, 94);
@@ -91,7 +94,7 @@
             // 
             p10_lb_dineroDisp.AutoSize = true;
             p10_lb_dineroDisp.BorderStyle = BorderStyle.FixedSingle;
-            p10_lb_dineroDisp.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            p10_lb_dineroDisp.Font = new Font("Yu Gothic UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             p10_lb_dineroDisp.Location = new Point(176, 105);
             p10_lb_dineroDisp.Name = "p10_lb_dineroDisp";
             p10_lb_dineroDisp.Size = new Size(78, 48);
@@ -101,7 +104,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Yu Gothic UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(176, 37);
             label1.Name = "label1";
             label1.Size = new Size(289, 46);
@@ -116,6 +119,7 @@
             p10_pn_properties.Controls.Add(p10_lbl_accountNumber);
             p10_pn_properties.Controls.Add(p10_lb_nombre);
             p10_pn_properties.Dock = DockStyle.Left;
+            p10_pn_properties.Font = new Font("Yu Gothic UI", 9F);
             p10_pn_properties.Location = new Point(0, 0);
             p10_pn_properties.Name = "p10_pn_properties";
             p10_pn_properties.Size = new Size(155, 450);
@@ -135,6 +139,7 @@
             // 
             p10_lb_num_cuenta.AutoSize = true;
             p10_lb_num_cuenta.BorderStyle = BorderStyle.FixedSingle;
+            p10_lb_num_cuenta.Font = new Font("Yu Gothic UI", 9F);
             p10_lb_num_cuenta.Location = new Point(55, 261);
             p10_lb_num_cuenta.Name = "p10_lb_num_cuenta";
             p10_lb_num_cuenta.Size = new Size(41, 22);
@@ -145,6 +150,7 @@
             // 
             p10_lbl_accountNumber.AutoSize = true;
             p10_lbl_accountNumber.BorderStyle = BorderStyle.FixedSingle;
+            p10_lbl_accountNumber.Font = new Font("Yu Gothic UI", 9F);
             p10_lbl_accountNumber.Location = new Point(11, 230);
             p10_lbl_accountNumber.Name = "p10_lbl_accountNumber";
             p10_lbl_accountNumber.Size = new Size(134, 22);
@@ -155,6 +161,7 @@
             // 
             p10_lb_nombre.AutoSize = true;
             p10_lb_nombre.BorderStyle = BorderStyle.FixedSingle;
+            p10_lb_nombre.Font = new Font("Yu Gothic UI", 9F);
             p10_lb_nombre.Location = new Point(55, 167);
             p10_lb_nombre.Name = "p10_lb_nombre";
             p10_lb_nombre.Size = new Size(41, 22);

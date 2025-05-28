@@ -30,7 +30,7 @@
         {
             p0_btn_UsarCajero = new Button();
             p0_btn_Acceder = new Button();
-            p0_lb_Bienvenido = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // p0_btn_UsarCajero
@@ -53,23 +53,23 @@
             p0_btn_Acceder.UseVisualStyleBackColor = true;
             p0_btn_Acceder.Click += p0_btn_Acceder_Click;
             // 
-            // p0_lb_Bienvenido
+            // label1
             // 
-            p0_lb_Bienvenido.AutoSize = true;
-            p0_lb_Bienvenido.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            p0_lb_Bienvenido.Location = new Point(21, 33);
-            p0_lb_Bienvenido.Name = "p0_lb_Bienvenido";
-            p0_lb_Bienvenido.Size = new Size(185, 46);
-            p0_lb_Bienvenido.TabIndex = 3;
-            p0_lb_Bienvenido.Text = "Bienvenido";
-            p0_lb_Bienvenido.Click += p0_lb_Bienvenido_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 46);
+            label1.TabIndex = 11;
+            label1.Text = "Bienvenido";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // p00_mainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(p0_lb_Bienvenido);
+            Controls.Add(label1);
             Controls.Add(p0_btn_Acceder);
             Controls.Add(p0_btn_UsarCajero);
             Name = "p00_mainMenu";
@@ -82,6 +82,6 @@
 
         private Button p0_btn_UsarCajero;
         private Button p0_btn_Acceder;
-        private Label p0_lb_Bienvenido;
+        private Label label1;
     }
 }
