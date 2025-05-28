@@ -34,17 +34,17 @@
             comboBox1 = new ComboBox();
             label7 = new Label();
             panel1 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             label6 = new Label();
-            panel2 = new Panel();
-            label9 = new Label();
-            comboBox3 = new ComboBox();
             label5 = new Label();
             label1 = new Label();
+            panel2 = new Panel();
+            label9 = new Label();
+            branch_cb_update_selectID = new ComboBox();
+            branch_cb_updateBranch = new ComboBox();
             label8 = new Label();
             label3 = new Label();
-            comboBox2 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -77,6 +77,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(12, 93);
             comboBox1.Name = "comboBox1";
@@ -110,6 +111,24 @@
             panel1.Size = new Size(459, 387);
             panel1.TabIndex = 34;
             // 
+            // button2
+            // 
+            button2.Location = new Point(354, 220);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 53);
+            button2.TabIndex = 37;
+            button2.Text = "Borrar Cajero";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(184, 346);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 0;
+            button1.Text = "Actualizar";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -120,37 +139,6 @@
             label6.TabIndex = 35;
             label6.Text = "Actualizar Datos";
             label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(comboBox3);
-            panel2.Controls.Add(comboBox2);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label3);
-            panel2.Location = new Point(0, 81);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(459, 140);
-            panel2.TabIndex = 35;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(12, 31);
-            label9.Name = "label9";
-            label9.Size = new Size(143, 20);
-            label9.TabIndex = 36;
-            label9.Text = "Seleccione el cajero\r\n";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(238, 89);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(210, 28);
-            comboBox3.TabIndex = 33;
             // 
             // label5
             // 
@@ -170,6 +158,47 @@
             label1.TabIndex = 24;
             label1.Text = "Ultima recarga";
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(branch_cb_update_selectID);
+            panel2.Controls.Add(branch_cb_updateBranch);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(label3);
+            panel2.Location = new Point(0, 81);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(459, 140);
+            panel2.TabIndex = 35;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(12, 31);
+            label9.Name = "label9";
+            label9.Size = new Size(143, 20);
+            label9.TabIndex = 36;
+            label9.Text = "Seleccione el cajero\r\n";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // branch_cb_update_selectID
+            // 
+            branch_cb_update_selectID.DropDownStyle = ComboBoxStyle.DropDownList;
+            branch_cb_update_selectID.FormattingEnabled = true;
+            branch_cb_update_selectID.Location = new Point(238, 89);
+            branch_cb_update_selectID.Name = "branch_cb_update_selectID";
+            branch_cb_update_selectID.Size = new Size(210, 28);
+            branch_cb_update_selectID.TabIndex = 33;
+            // 
+            // branch_cb_updateBranch
+            // 
+            branch_cb_updateBranch.DropDownStyle = ComboBoxStyle.DropDownList;
+            branch_cb_updateBranch.FormattingEnabled = true;
+            branch_cb_updateBranch.Location = new Point(12, 90);
+            branch_cb_updateBranch.Name = "branch_cb_updateBranch";
+            branch_cb_updateBranch.Size = new Size(203, 28);
+            branch_cb_updateBranch.TabIndex = 32;
+            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -187,32 +216,6 @@
             label3.Size = new Size(63, 20);
             label3.TabIndex = 18;
             label3.Text = "Sucursal";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(12, 90);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(203, 28);
-            comboBox2.TabIndex = 32;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(184, 346);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Actualizar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(354, 220);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 53);
-            button2.TabIndex = 37;
-            button2.Text = "Borrar Cajero";
-            button2.UseVisualStyleBackColor = true;
             // 
             // update_cashier
             // 
@@ -243,12 +246,12 @@
         private Label label6;
         private Panel panel2;
         private Label label9;
-        private ComboBox comboBox3;
+        private ComboBox branch_cb_update_selectID;
         private Button button2;
         private Button button1;
         private Label label5;
         private Label label1;
-        private ComboBox comboBox2;
+        private ComboBox branch_cb_updateBranch;
         private Label label8;
         private Label label3;
     }
