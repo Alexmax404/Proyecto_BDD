@@ -29,7 +29,7 @@ namespace Proyecto_bdd2.p0.Admin
                     cashier_cb_sucursalDeCajero.DataSource = tabla;
                     cashier_cb_sucursalDeCajero.SelectedIndex = 0;
 
-                    cashier_btn_create.Enabled = true; 
+                    cashier_btn_create.Enabled = true;
                 }
                 else
                 {
@@ -37,7 +37,8 @@ namespace Proyecto_bdd2.p0.Admin
                     cashier_cb_sucursalDeCajero.SelectedIndex = 0;
                     cashier_cb_sucursalDeCajero.Enabled = false;
 
-                    cashier_btn_create.Enabled = false; 
+                    cashier_btn_create.Enabled = false;
+                }
             }
             catch (Exception ex)
             {

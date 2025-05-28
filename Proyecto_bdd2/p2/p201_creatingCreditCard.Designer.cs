@@ -36,6 +36,7 @@
             // 
             // p201_cb_CardType
             // 
+            p201_cb_CardType.DropDownStyle = ComboBoxStyle.DropDownList;
             p201_cb_CardType.FormattingEnabled = true;
             p201_cb_CardType.Location = new Point(95, 133);
             p201_cb_CardType.Name = "p201_cb_CardType";
