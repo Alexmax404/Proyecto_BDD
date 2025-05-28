@@ -28,5 +28,24 @@ END;";
 
             misDatos.ejecutarDML(consulta);
         }
+
+        public void HacerRetiroCajero(string numeroTarjeta, string idCajero, decimal monto)
+        {
+            if (monto <= 0)
+                throw new ArgumentException("El monto debe ser mayor que cero.");
+
+            string consulta = $@"
+BEGIN
+    transaccion_pkg.HACER_TRANSACCION_CAJERO(
+        '{numeroTarjeta.Replace("'", "''")}',
+        '{idCajero.Replace("'", "''")}',
+        {monto.ToString(CultureInfo.InvariantCulture)},
+        'RETIRAR'
+    );
+END;";
+
+            misDatos.ejecutarDML(consulta);
+        }
+
     }
 }

@@ -25,7 +25,7 @@ namespace Proyecto_bdd2.p3
             idCuenta = idCuentaRecibida;
             idCajero = idCajeroRecibido;
 
-            this.Load += p32_cashier_Menu_Load;
+            //this.Load += p32_cashier_Menu_Load;
         }
 
         private void p32_cashier_Menu_Load(object sender, EventArgs e)
@@ -63,6 +63,26 @@ namespace Proyecto_bdd2.p3
         private void p32_btn_consignar_Click(object sender, EventArgs e)
         {
             p33_consign form2 = new p33_consign(idTarjeta, idCuenta, idCajero);
+            form2.StartPosition = FormStartPosition.Manual;
+            form2.Location = this.Location;
+            form2.Show();
+        }
+
+        private void p32_btn_retirar_Click(object sender, EventArgs e)
+        {
+            p34_retire form2 = new p34_retire(idTarjeta, idCuenta, idCajero);
+            form2.StartPosition = FormStartPosition.Manual;
+            form2.Location = this.Location;
+            form2.Show();
+        }
+
+        private void p32_btn_cancelar_Click(object sender, EventArgs e)
+        {
+            //cancelar y volver
+            this.Hide();
+
+            MessageBox.Show("Operación cancelada. Volviendo al menú de cajeros.", "Operación cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            p30_cashier_logger form2 = new p30_cashier_logger();
             form2.StartPosition = FormStartPosition.Manual;
             form2.Location = this.Location;
             form2.Show();
