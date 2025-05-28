@@ -32,9 +32,9 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
+            cashier_tb_monto = new TextBox();
             cashier_btn_create = new Button();
-            comboBox1 = new ComboBox();
+            cashier_cb_sucursalDeCajero = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -74,14 +74,14 @@
             label4.TabIndex = 16;
             label4.Text = "¿Cuanto efectivo va a tener?";
             // 
-            // textBox1
+            // cashier_tb_monto
             // 
-            textBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(115, 204);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "$$$$";
-            textBox1.Size = new Size(237, 38);
-            textBox1.TabIndex = 15;
+            cashier_tb_monto.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cashier_tb_monto.Location = new Point(115, 204);
+            cashier_tb_monto.Name = "cashier_tb_monto";
+            cashier_tb_monto.PlaceholderText = "$$$$";
+            cashier_tb_monto.Size = new Size(237, 38);
+            cashier_tb_monto.TabIndex = 15;
             // 
             // cashier_btn_create
             // 
@@ -93,23 +93,23 @@
             cashier_btn_create.UseVisualStyleBackColor = true;
             cashier_btn_create.Click += cashier_btn_create_Click;
             // 
-            // comboBox1
+            // cashier_cb_sucursalDeCajero
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(115, 133);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(237, 28);
-            comboBox1.TabIndex = 18;
+            cashier_cb_sucursalDeCajero.FormattingEnabled = true;
+            cashier_cb_sucursalDeCajero.Location = new Point(115, 133);
+            cashier_cb_sucursalDeCajero.Name = "cashier_cb_sucursalDeCajero";
+            cashier_cb_sucursalDeCajero.Size = new Size(237, 28);
+            cashier_cb_sucursalDeCajero.TabIndex = 18;
             // 
             // create_cashier
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(493, 322);
-            Controls.Add(comboBox1);
+            Controls.Add(cashier_cb_sucursalDeCajero);
             Controls.Add(cashier_btn_create);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(cashier_tb_monto);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -125,8 +125,8 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox cashier_tb_monto;
         private Button cashier_btn_create;
-        private ComboBox comboBox1;
+        private ComboBox cashier_cb_sucursalDeCajero;
     }
 }
