@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             p10_pn_loged_user_mm = new Panel();
-            p10_btn_historial_de_transacciones = new Button();
             p10_btn_CreditCard = new Button();
             p10_btn_lendings = new Button();
             p10_btn_sendMoney = new Button();
@@ -46,7 +45,6 @@
             // 
             // p10_pn_loged_user_mm
             // 
-            p10_pn_loged_user_mm.Controls.Add(p10_btn_historial_de_transacciones);
             p10_pn_loged_user_mm.Controls.Add(p10_btn_CreditCard);
             p10_pn_loged_user_mm.Controls.Add(p10_btn_lendings);
             p10_pn_loged_user_mm.Controls.Add(p10_btn_sendMoney);
@@ -58,17 +56,6 @@
             p10_pn_loged_user_mm.Name = "p10_pn_loged_user_mm";
             p10_pn_loged_user_mm.Size = new Size(800, 450);
             p10_pn_loged_user_mm.TabIndex = 0;
-            // 
-            // p10_btn_historial_de_transacciones
-            // 
-            p10_btn_historial_de_transacciones.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            p10_btn_historial_de_transacciones.Location = new Point(176, 404);
-            p10_btn_historial_de_transacciones.Name = "p10_btn_historial_de_transacciones";
-            p10_btn_historial_de_transacciones.Size = new Size(199, 34);
-            p10_btn_historial_de_transacciones.TabIndex = 8;
-            p10_btn_historial_de_transacciones.Text = "Historial de transacciones";
-            p10_btn_historial_de_transacciones.UseVisualStyleBackColor = true;
-            p10_btn_historial_de_transacciones.Click += p10_btn_historial_de_transacciones_Click;
             // 
             // p10_btn_CreditCard
             // 
@@ -197,7 +184,6 @@
         private Label p10_lb_nombre;
         private Label p10_lb_num_cuenta;
         private Label label1;
-        private Button p10_btn_historial_de_transacciones;
         private Button p10_btn_CreditCard;
         private Button p10_btn_lendings;
         private Button p10_btn_sendMoney;

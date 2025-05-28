@@ -36,7 +36,7 @@
             label3 = new Label();
             panel2 = new Panel();
             cashier_lbl_saludo = new Label();
-            button3 = new Button();
+            p32_btn_cancelar = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -85,6 +85,7 @@
             p32_btn_retirar.TabIndex = 1;
             p32_btn_retirar.Text = "retirar";
             p32_btn_retirar.UseVisualStyleBackColor = true;
+            p32_btn_retirar.Click += p32_btn_retirar_Click;
             // 
             // panel3
             // 
@@ -112,7 +113,7 @@
             panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(cashier_lbl_saludo);
-            panel2.Controls.Add(button3);
+            panel2.Controls.Add(p32_btn_cancelar);
             panel2.Location = new Point(169, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(461, 447);
@@ -129,18 +130,19 @@
             cashier_lbl_saludo.Text = "...";
             cashier_lbl_saludo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // p32_btn_cancelar
             // 
-            button3.BackColor = Color.DarkGray;
-            button3.FlatStyle = FlatStyle.System;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(166, 358);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 73);
-            button3.TabIndex = 15;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = false;
+            p32_btn_cancelar.BackColor = Color.DarkGray;
+            p32_btn_cancelar.FlatStyle = FlatStyle.System;
+            p32_btn_cancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            p32_btn_cancelar.ForeColor = SystemColors.ActiveCaptionText;
+            p32_btn_cancelar.Location = new Point(166, 358);
+            p32_btn_cancelar.Name = "p32_btn_cancelar";
+            p32_btn_cancelar.Size = new Size(135, 73);
+            p32_btn_cancelar.TabIndex = 15;
+            p32_btn_cancelar.Text = "Cancelar";
+            p32_btn_cancelar.UseVisualStyleBackColor = false;
+            p32_btn_cancelar.Click += p32_btn_cancelar_Click;
             // 
             // p32_cashier_Menu
             // 
@@ -166,7 +168,7 @@
         private Panel panel2;
         private Label label3;
         private Panel panel3;
-        private Button button3;
+        private Button p32_btn_cancelar;
         private Button p01_btn_back;
         private Label cashier_lbl_saludo;
     }
